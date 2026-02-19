@@ -1,4 +1,4 @@
-const scriptURL = "ISI_URL_GOOGLE_APPS_SCRIPT";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec";
 
 document.getElementById("ppdbForm").addEventListener("submit", e => {
     e.preventDefault();
@@ -23,4 +23,5 @@ document.getElementById("ppdbForm").addEventListener("submit", e => {
     .catch(() => {
         notif.innerHTML = "❌ Gagal mengirim data";
     });
+
 });
