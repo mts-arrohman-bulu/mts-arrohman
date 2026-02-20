@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {  // <- ini penting supaya tidak error di halaman lain
 
-        const scriptURL = ""https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec"";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec";
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -25,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
