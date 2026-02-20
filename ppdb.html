@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>PPDB - MTs Ar Rohman 01 Bulu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="header">
+    <img src="logo.png" class="logo">
+    <div>
+        <h1>PPDB Online</h1>
+        <p>MTs Ar Rohman 01 Bulu</p>
+    </div>
+</header>
+
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li>
+            <a href="#">Informasi ▾</a>
+            <ul class="dropdown">
+                <li><a href="berita.html">Berita</a></li>
+            </ul>
+        </li>
+        <li><a href="ppdb.html">PPDB</a></li>
+    </ul>
+</nav>
+
+<section class="section">
+    <h2>Form Pendaftaran</h2>
+
+    <form id="ppdbForm">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        <input type="text" id="asal" placeholder="Asal Sekolah" required>
+
+        <select id="jk" required>
+            <option value="">Jenis Kelamin</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+        </select>
+
+        <input type="text" id="ortu" placeholder="Nama Orang Tua" required>
+        <input type="tel" id="hp" placeholder="No HP Orang Tua" required>
+        <textarea id="alamat" placeholder="Alamat" required></textarea>
+
+        <button type="submit">Kirim Pendaftaran</button>
+        <p id="notif"></p>
+    </form>
+</section>
+
+<footer>
+© 2026 MTs Ar Rohman 01 Bulu
+</footer>
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec';
+
+document.getElementById("ppdbForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new URLSearchParams({
+            nama: document.getElementById("nama").value,
+            asal: document.getElementById("asal").value,
+            jk: document.getElementById("jk").value,
+            ortu: document.getElementById("ortu").value,
+            hp: document.getElementById("hp").value,
+            alamat: document.getElementById("alamat").value
+        })
+    })
+    .then(response => {
+        document.getElementById("notif").innerHTML = "Pendaftaran berhasil!";
+        document.getElementById("ppdbForm").reset();
+    })
+    .catch(error => {
+        document.getElementById("notif").innerHTML = "Terjadi kesalahan.";
+    });
+});
+</script>
+
+</body>
+</html>
