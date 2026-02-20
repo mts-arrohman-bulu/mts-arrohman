@@ -1,27 +1,27 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec";
+document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("ppdbForm").addEventListener("submit", e => {
-    e.preventDefault();
+    const form = document.getElementById("ppdbForm");
 
-    const data = {
-        nama: nama.value,
-        asal: asal.value,
-        jk: jk.value,
-        ortu: ortu.value,
-        hp: hp.value,
-        alamat: alamat.value
-    };
+    if (form) {  // <- ini penting supaya tidak error di halaman lain
 
-    fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data)
-    })
-    .then(() => {
-        notif.innerHTML = "✅ Pendaftaran berhasil dikirim";
-        e.target.reset();
-    })
-    .catch(() => {
-        notif.innerHTML = "❌ Gagal mengirim data";
-    });
+        const scriptURL = ""https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec"";
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            fetch(scriptURL, {
+                method: "POST",
+                body: new FormData(form)
+            })
+            .then(response => {
+                document.getElementById("notif").innerText = "Pendaftaran berhasil!";
+                form.reset();
+            })
+            .catch(error => {
+                document.getElementById("notif").innerText = "Terjadi kesalahan!";
+            });
+        });
+
+    }
 
 });
