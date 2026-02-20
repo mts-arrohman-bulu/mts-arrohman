@@ -11,22 +11,6 @@ header {
     padding: 30px;
 }
 
-nav {
-    background: #145a32;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    padding: 14px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background: #1e8449;
-}
-
 .hero {
     padding: 60px 20px;
     text-align: center;
@@ -94,7 +78,7 @@ footer {
     background: #1e8449;
 }
 
-/* Dropdown */
+/* Submenu */
 .dropdown {
     display: none;
     position: absolute;
@@ -104,7 +88,11 @@ footer {
     min-width: 200px;
     list-style: none;
     padding: 0;
+    margin: 0;
     z-index: 1000;
+}
+.menu li:hover > .dropdown {
+    display: block;
 }
 
 .dropdown li a {
@@ -152,4 +140,5 @@ footer {
     height: 90px;
     object-fit: contain;
 }
+
 
