@@ -65,16 +65,27 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4seg
 document.getElementById("ppdbForm").addEventListener("submit", function(e){
     e.preventDefault();
 
-    fetch(scriptURL, {
-        method: 'POST',
-        body: new URLSearchParams({
-            nama: document.getElementById("nama").value,
-            asal: document.getElementById("asal").value,
-            jk: document.getElementById("jk").value,
-            ortu: document.getElementById("ortu").value,
-            hp: document.getElementById("hp").value,
-            alamat: document.getElementById("alamat").value
-        })
+   fetch(scriptURL, {
+    method: 'POST',
+    body: new URLSearchParams({
+        nama: document.getElementById("nama").value,
+        asal: document.getElementById("asal").value,
+        jk: document.getElementById("jk").value,
+        ortu: document.getElementById("ortu").value,
+        hp: document.getElementById("hp").value,
+        alamat: document.getElementById("alamat").value
+    })
+})
+.then(response => response.text())
+.then(data => {
+    console.log("Response dari server:", data);
+    document.getElementById("notif").innerHTML = "Pendaftaran berhasil!";
+    document.getElementById("ppdbForm").reset();
+})
+.catch(error => {
+    console.log("Error detail:", error);
+    document.getElementById("notif").innerHTML = "Terjadi kesalahan.";
+});
     })
     .then(response => {
         document.getElementById("notif").innerHTML = "Pendaftaran berhasil!";
