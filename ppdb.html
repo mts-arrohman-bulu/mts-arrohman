@@ -34,18 +34,18 @@
     <h2>Form Pendaftaran</h2>
 
     <form id="ppdbForm">
-        <input type="text" id="nama" placeholder="Nama Lengkap" required>
-        <input type="text" id="asal" placeholder="Asal Sekolah" required>
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+        <input type="text" name="asal" placeholder="Asal Sekolah" required>
 
-        <select id="jk" required>
+        <select name="jk" id="jk" required>
             <option value="">Jenis Kelamin</option>
             <option>Laki-laki</option>
             <option>Perempuan</option>
         </select>
 
-        <input type="text" id="ortu" placeholder="Nama Orang Tua" required>
-        <input type="tel" id="hp" placeholder="No HP Orang Tua" required>
-        <textarea id="alamat" placeholder="Alamat" required></textarea>
+        <input type="text" name="ortu" placeholder="Nama Orang Tua" required>
+        <input type="tel" name="hp" placeholder="No HP Orang Tua" required>
+        <textarea name="alamat" placeholder="Alamat" required></textarea>
 
         <button type="submit">Kirim Pendaftaran</button>
         <p id="notif"></p>
