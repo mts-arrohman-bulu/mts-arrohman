@@ -10,19 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
 
             fetch(scriptURL, {
-                method: "POST",
-                body: new FormData(form)
-            })
-            .then(response => {
-                document.getElementById("notif").innerText = "Pendaftaran berhasil!";
-                form.reset();
-            })
-            .catch(error => {
-                document.getElementById("notif").innerText = "Terjadi kesalahan!";
-            });
-        });
-
-    }
-
+    method: 'POST',
+    mode: 'no-cors',   // ← TAMBAHKAN INI
+    body: new URLSearchParams({
+        nama: document.getElementById("nama").value,
+        asal: document.getElementById("asal").value,
+        jk: document.getElementById("jk").value,
+        ortu: document.getElementById("ortu").value,
+        hp: document.getElementById("hp").value,
+        alamat: document.getElementById("alamat").value
+    })
+})
+.then(() => {
+    document.getElementById("notif").innerHTML = "Pendaftaran berhasil!";
+    document.getElementById("ppdbForm").reset();
+})
+.catch(() => {
+    document.getElementById("notif").innerHTML = "Terjadi kesalahan.";
 });
+
 
