@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {  // <- ini penting supaya tidak error di halaman lain
 
-        const scriptURL = "https://script.google.com/macros/s/AKfycbyoWZc1R7HsBhNnaM4segS43sdMDzc4B7w9ylpz1ubLM7QupVyWUBvlGfzPOMtpD2lO-g/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyMuUXlEudKs4iMeQQgveOCRTXpHEVdLTzOo_-_4B1lcsQWOKojRO95uxr-n3ey3HYt/exec";
 
         form.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -28,5 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 .catch(() => {
     document.getElementById("notif").innerHTML = "Terjadi kesalahan.";
 });
+
 
 
