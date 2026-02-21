@@ -1,5 +1,5 @@
+alert("SCRIPT TERLOAD");
 document.addEventListener("DOMContentLoaded", function () {
-
   const scriptURL = "PASTE_URL_WEBAPP_BARU_DI_SINI";
   const form = document.getElementById("ppdbForm");
 
@@ -28,3 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
