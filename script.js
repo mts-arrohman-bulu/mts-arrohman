@@ -12,12 +12,12 @@ if (form) {
     })
     .then(response => response.text())
     .then(data => {
-      alert("Pendaftaran berhasil!");
-      form.reset();
-    })
+  alert("Response dari server: " + data);
+})
     .catch(error => {
       alert("Terjadi kesalahan!");
       console.error(error);
     });
   });
 }
+
