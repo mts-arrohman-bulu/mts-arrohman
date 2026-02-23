@@ -1,4 +1,4 @@
-const scriptURL = "PASTE_URL_EXEC_KAMU_DI_SINI";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyMuUXlEudKs4iMeQQgveOCRTXpHEVdLTzOo_-_4B1lcsQWOKojRO95uxr-n3ey3HYt/exec";
 
 const form = document.getElementById("ppdbForm");
 
@@ -20,4 +20,5 @@ if (form) {
     });
   });
 }
+
 
