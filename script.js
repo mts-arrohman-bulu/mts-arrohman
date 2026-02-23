@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbyMuUXlEudKs4iMeQQgveOCRTXpHEVdLTzOo_-_4B1lcsQWOKojRO95uxr-n3ey3HYt/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyTy4yst0mTuk_p6MvdIU2Nsh1E0ukWNhJgvbh3kbrRAt_AD9aw_NeYdmFGpPQrVq1GEA/exec";
 
 const form = document.getElementById("ppdbForm");
 
@@ -20,5 +20,6 @@ if (form) {
     });
   });
 }
+
 
 
