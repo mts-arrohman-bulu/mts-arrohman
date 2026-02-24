@@ -68,18 +68,36 @@
 <section id="ppdb" class="section">
     <h2>PPDB Online</h2>
     <form id="ppdbForm">
-        <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required>
-<input type="text" id="asal" name="asal" placeholder="Asal Sekolah" required>
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
 
-<select id="jk" name="jk" required>
+<select name="jk" required>
   <option value="">Jenis Kelamin</option>
   <option>Laki-laki</option>
   <option>Perempuan</option>
 </select>
 
-<input type="text" id="ortu" name="ortu" placeholder="Nama Orang Tua" required>
-<input type="tel" id="hp" name="hp" placeholder="No HP Orang Tua" required>
-<textarea id="alamat" name="alamat" placeholder="Alamat" required></textarea>
+<input type="text" name="tempat_lahir" placeholder="Tempat Lahir" required>
+
+<input type="date" name="tanggal_lahir" required>
+
+<input type="text" name="nik" placeholder="NIK" required>
+
+<input type="text" name="nisn" placeholder="NISN" required>
+
+<input type="text" name="asal" placeholder="Asal Sekolah" required>
+
+<input type="text" name="ayah" placeholder="Nama Ayah" required>
+
+<input type="text" name="pekerjaan_ayah" placeholder="Pekerjaan Ayah" required>
+
+<input type="text" name="ibu" placeholder="Nama Ibu" required>
+
+<input type="text" name="pekerjaan_ibu" placeholder="Pekerjaan Ibu" required>
+
+<input type="tel" name="hp" placeholder="No HP Orang Tua" required>
+
+<button type="submit">Kirim Pendaftaran</button>
+<p id="notif"></p>
         <button type="submit">Kirim Pendaftaran</button>
         <p id="notif"></p>
     </form>
@@ -99,4 +117,5 @@
 </body>
 
 </html>
+
 
