@@ -26,3 +26,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 });
+const today = new Date();
+
+const options = { 
+  day: '2-digit', 
+  month: 'long', 
+  year: 'numeric' 
+};
+
+document.getElementById("tanggal-cetak").innerText =
+  "Bulu, " + today.toLocaleDateString("id-ID", options);
+
+document.getElementById("nama-ttd").innerText =
+  params.get("nama");
+
