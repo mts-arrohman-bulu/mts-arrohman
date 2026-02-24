@@ -50,7 +50,25 @@ body { background:white; }
     <tr><td>Nama Ibu</td><td id="ibu"></td></tr>
     <tr><td>No HP</td><td id="hp"></td></tr>
   </table>
+<br><br>
 
+<div class="ttd-area">
+
+  <div class="ttd-kiri">
+    <p>Mengetahui,</p>
+    <p>Panitia PPDB</p>
+    <br><br><br>
+    <p>(_________________________)</p>
+  </div>
+
+  <div class="ttd-kanan">
+    <p id="tanggal-cetak"></p>
+    <p>Peserta Didik Baru</p>
+    <br><br><br>
+    <p>(<span id="nama-ttd"></span>)</p>
+  </div>
+
+</div>
   <div class="no-print">
     <button onclick="window.print()">Cetak</button>
   </div>
@@ -79,6 +97,7 @@ document.getElementById("hp").innerText = params.get("hp");
 </body>
 
 </html>
+
 
 
 
