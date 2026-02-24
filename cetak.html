@@ -6,18 +6,17 @@
 <link rel="stylesheet" href="style.css">
 <style>
 body { background:white; }
+
 .print-area {
   max-width:800px;
   margin:auto;
   padding:40px;
   border:1px solid #000;
 }
-h2 { text-align:center; }
-table { width:100%; margin-top:20px; }
-td { padding:8px; }
-.no-print { margin-top:20px; text-align:center; }
+
 @media print {
   .no-print { display:none; }
+  body { margin:0; }
 }
 </style>
 </head>
@@ -79,6 +78,7 @@ document.getElementById("hp").innerText = params.get("hp");
 </body>
 
 </html>
+
 
 
 
