@@ -24,8 +24,18 @@ td { padding:8px; }
 <body>
 
 <div class="print-area">
-  <h2>BUKTI PENDAFTARAN</h2>
-  <h3 style="text-align:center;">PPDB MTs Ar Rohman 01 Bulu</h3>
+  <div class="header-print">
+  <img src="logo.png" class="logo-print">
+
+  <div class="judul-print">
+    <h2>MTs Ar Rohman 01 Bulu</h2>
+    <p>Lambangan Kulon, Bulu, Rembang</p>
+    <p>Telp: 0813-2633-4045</p>
+    <h3>BUKTI PENDAFTARAN PPDB 2026/2027</h3>
+  </div>
+</div>
+
+<hr>
 
   <table>
     <tr><td>Nomor Pendaftaran</td><td id="no"></td></tr>
@@ -69,5 +79,6 @@ document.getElementById("hp").innerText = params.get("hp");
 </body>
 
 </html>
+
 
 
