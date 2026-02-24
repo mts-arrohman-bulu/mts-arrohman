@@ -26,6 +26,16 @@ hr {
   border: 2px solid black;
   margin: 20px 0;
 }
+.ttd-area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.ttd-kiri, .ttd-kanan {
+  width: 40%;
+  text-align: center;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -180,6 +190,7 @@ nav {
     padding: 0;
     margin: 0;
 }
+
 
 
 
