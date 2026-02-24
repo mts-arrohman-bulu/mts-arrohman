@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bukti Pendaftaran PPDB</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body { background:white; }
+.print-area {
+  max-width:800px;
+  margin:auto;
+  padding:40px;
+  border:1px solid #000;
+}
+h2 { text-align:center; }
+table { width:100%; margin-top:20px; }
+td { padding:8px; }
+.no-print { margin-top:20px; text-align:center; }
+@media print {
+  .no-print { display:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="print-area">
+  <h2>BUKTI PENDAFTARAN</h2>
+  <h3 style="text-align:center;">PPDB MTs Ar Rohman 01 Bulu</h3>
+
+  <table>
+    <tr><td>Nomor Pendaftaran</td><td id="no"></td></tr>
+    <tr><td>Nama Lengkap</td><td id="nama"></td></tr>
+    <tr><td>Jenis Kelamin</td><td id="jk"></td></tr>
+    <tr><td>Tempat Lahir</td><td id="tempat"></td></tr>
+    <tr><td>Tanggal Lahir</td><td id="tgl"></td></tr>
+    <tr><td>NIK</td><td id="nik"></td></tr>
+    <tr><td>NISN</td><td id="nisn"></td></tr>
+    <tr><td>Asal Sekolah</td><td id="asal"></td></tr>
+    <tr><td>Nama Ayah</td><td id="ayah"></td></tr>
+    <tr><td>Nama Ibu</td><td id="ibu"></td></tr>
+    <tr><td>No HP</td><td id="hp"></td></tr>
+  </table>
+
+  <div class="no-print">
+    <button onclick="window.print()">Cetak</button>
+  </div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("no").innerText = params.get("no");
+document.getElementById("nama").innerText = params.get("nama");
+document.getElementById("jk").innerText = params.get("jk");
+document.getElementById("tempat").innerText = params.get("tempat");
+document.getElementById("tgl").innerText = params.get("tgl");
+document.getElementById("nik").innerText = params.get("nik");
+document.getElementById("nisn").innerText = params.get("nisn");
+document.getElementById("asal").innerText = params.get("asal");
+document.getElementById("ayah").innerText = params.get("ayah");
+document.getElementById("ibu").innerText = params.get("ibu");
+document.getElementById("hp").innerText = params.get("hp");
+</script>
+
+</body>
+</html>
