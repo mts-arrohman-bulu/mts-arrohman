@@ -6,18 +6,25 @@ if (form) {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch(scriptURL, {
+  method: 'POST',
+  body: new FormData(form)
+})
 .then(response => response.text())
 .then(nomor => {
-  document.getElementById("notif").innerHTML =
-    "Pendaftaran berhasil! Nomor Anda: <b>" + nomor + "</b>";
-})
+
+  const data = new FormData(form);
+  const query = new URLSearchParams(data).toString();
+
+  window.location.href = "cetak.html?no=" + nomor + "&" + query;
+});
     .catch(error => {
       alert("Terjadi kesalahan");
       console.error(error);
     });
   });
 }
+
 
 
 
