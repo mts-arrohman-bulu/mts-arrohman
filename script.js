@@ -2,30 +2,22 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbx9h0DYD_f7KOeaVCD5nK
 
 const form = document.getElementById("ppdbForm");
 
-if (form) {
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
+form.addEventListener("submit", function(e){
+  e.preventDefault();
 
-    fetch(scriptURL, {
-  method: 'POST',
-  body: new FormData(form)
-})
-.then(response => response.text())
-.then(nomor => {
+  fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form)
+  })
+  .then(response => response.text())
+  .then(nomor => {
 
-  const data = new FormData(form);
-  const query = new URLSearchParams(data).toString();
+    const query = new URLSearchParams(new FormData(form)).toString();
 
-  window.location.href = "cetak.html?no=" + nomor + "&" + query;
-});
-    .catch(error => {
-      alert("Terjadi kesalahan");
-      console.error(error);
-    });
+    window.location.href = "cetak.html?no=" + nomor + "&" + query;
+
+  })
+  .catch(error => {
+    alert("Terjadi kesalahan.");
   });
-}
-
-
-
-
-
+});
