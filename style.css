@@ -197,6 +197,55 @@ nav {
     padding: 0;
     margin: 0;
 }
+.menu {
+  list-style: none;
+  display: flex;
+  background: #0a5c2f;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background: #0d7a40;
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown li a {
+  color: black;
+  padding: 10px 15px;
+}
+
+.dropdown li a:hover {
+  background: #f0f0f0;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
 
 
 
