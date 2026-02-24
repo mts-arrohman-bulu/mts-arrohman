@@ -6,21 +6,19 @@ if (form) {
   form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    fetch(scriptURL, {
-      method: "POST",
-      body: new FormData(form)
-    })
-    .then(response => response.text())
-    .then(data => {
-      alert(data);
-      form.reset();
-    })
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => response.text())
+.then(nomor => {
+  document.getElementById("notif").innerHTML =
+    "Pendaftaran berhasil! Nomor Anda: <b>" + nomor + "</b>";
+})
     .catch(error => {
       alert("Terjadi kesalahan");
       console.error(error);
     });
   });
 }
+
 
 
 
