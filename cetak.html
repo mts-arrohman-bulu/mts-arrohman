@@ -27,7 +27,7 @@ body { background:white; }
   <img src="logo.png" class="logo-print">
 
   <div class="judul-print">
-    <h2>MTs Ar Rohman 01 Bulu</h2>
+    <h2>MTs AR ROHMAN 01 BULU</h2>
     <p>Jl. Sulang-Sumber KM. 4,5 Lambangan Kulon</p>
     <p>Kec. Bulu, Kab. Rembang 59255</p>
     <p>Telp: 0813-2633-4045</p>
@@ -65,7 +65,7 @@ body { background:white; }
     <p id="tanggal-cetak"></p>
     <p>Peserta Didik Baru</p>
     <br><br><br>
-    <p>(<span id="nama"></span>)</p>
+    <p>(<span id="nama-ttd"></span>)</p>
   </div>
 
 </div>
@@ -92,11 +92,25 @@ document.getElementById("asal").innerText = params.get("asal");
 document.getElementById("ayah").innerText = params.get("ayah");
 document.getElementById("ibu").innerText = params.get("ibu");
 document.getElementById("hp").innerText = params.get("hp");
+const today = new Date();
+const options = { 
+  day: '2-digit', 
+  month: 'long', 
+  year: 'numeric' 
+};
+
+document.getElementById("tanggal-cetak").innerText =
+  "Bulu, " + today.toLocaleDateString("id-ID", options);
+
+document.getElementById("nama-ttd").innerText =
+  params.get("nama");
+
 </script>
 
 </body>
 
 </html>
+
 
 
 
