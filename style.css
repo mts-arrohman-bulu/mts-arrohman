@@ -149,6 +149,12 @@ footer {
     padding: 15px;
 
 }
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
 /* MENU DROPDOWN */
 .menu {
     list-style: none;
@@ -297,6 +303,7 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+
 
 
 
