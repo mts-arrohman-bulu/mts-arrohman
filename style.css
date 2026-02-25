@@ -74,7 +74,21 @@ header {
   font-size: 18px;
   margin-bottom: 25px;
 }
+.keunggulan {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.card {
+  background: white;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 .btn-utama {
   background: #f4b400;
   color: black;
@@ -277,6 +291,7 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+
 
 
 
