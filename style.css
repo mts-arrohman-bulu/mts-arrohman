@@ -55,7 +55,38 @@ header {
     text-align: center;
     padding: 30px;
 }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('bg-madrasah.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
 
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn-utama {
+  background: #f4b400;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-utama:hover {
+  background: #ffd54f;
+}
 .hero {
     padding: 60px 20px;
     text-align: center;
@@ -246,6 +277,7 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+
 
 
 
