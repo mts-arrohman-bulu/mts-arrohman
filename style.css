@@ -89,6 +89,12 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.ppdb-highlight {
+  text-align: center;
+  background: #0a5c2f;
+  color: white;
+  padding: 60px 20px;
+}
 .btn-utama {
   background: #f4b400;
   color: black;
@@ -291,6 +297,7 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+
 
 
 
