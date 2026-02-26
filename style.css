@@ -56,20 +56,44 @@ header {
     padding: 30px;
 }
 .hero {
-  background: #0a5c2f;
-  color: white;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('bg-madrasah.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 100px 20px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-utama {
+  background: #f4b400;
+  color: black;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-utama:hover {
+  background: #ffd54f;
 }
 .keunggulan {
   display: flex;
@@ -300,6 +324,7 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+
 
 
 
