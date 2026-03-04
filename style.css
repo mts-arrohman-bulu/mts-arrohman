@@ -324,6 +324,22 @@ nav {
 .has-dropdown:hover .dropdown {
   display: block;
 }
+.stat-box{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.stat{
+background:#1e8449;
+color:white;
+padding:20px;
+border-radius:10px;
+width:200px;
+text-align:center;
+font-size:20px;
+}
 
 
 
