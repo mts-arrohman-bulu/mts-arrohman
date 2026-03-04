@@ -1,121 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Akademik - MTs Ar Rohman 01 Bulu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Statistik PPDB - MTs Ar Rohman 01 Bulu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#0c7c59;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.section{
+padding:40px;
+text-align:center;
+}
+
+.stat-box{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.stat{
+background:white;
+padding:25px;
+width:200px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat h3{
+margin-bottom:10px;
+color:#333;
+}
+
+.stat p{
+font-size:28px;
+font-weight:bold;
+color:#0c7c59;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+</style>
 </head>
+
 <body>
 
-<header class="header">
-    <h1>Profil Madrasah</h1>
+<header>
+<h1>Statistik PPDB</h1>
+<p>MTs Ar Rohman 01 Bulu</p>
 </header>
-<nav>
-  <ul class="menu">
 
-    <li><a href="index.html">Beranda</a></li>
+<section class="section">
 
-    <li class="has-dropdown">
-      <a href="#">Profil ▾</a>
-      <ul class="dropdown">
-        <li><a href="profil.html#sejarah">Sejarah</a></li>
-        <li><a href="profil.html#visi">Visi & Misi</a></li>
-        <li><a href="profil.html#struktur">Struktur Organisasi</a></li>
-        <li><a href="profil.html#guru">Guru & Tendik</a></li>
-      </ul>
-    </li>
+<h2>Data Pendaftar</h2>
 
-    <li class="has-dropdown">
-      <a href="#">Akademik ▾</a>
-      <ul class="dropdown">
-        <li><a href="akademik.html#kurikulum">Kurikulum</a></li>
-        <li><a href="akademik.html#program">Program Unggulan</a></li>
-        <li><a href="akademik.html#jadwal">Jadwal Pelajaran</a></li>
-        <li><a href="akademik.html#kalender">Kalender Akademik</a></li>
-      </ul>
-    </li>
+<div class="stat-box">
 
-    <li class="has-dropdown">
-      <a href="#">Kesiswaan ▾</a>
-      <ul class="dropdown">
-        <li><a href="kesiswaan.html#ekstra">Ekstrakurikuler</a></li>
-        <li><a href="kesiswaan.html#prestasi">Prestasi</a></li>
-        <li><a href="kesiswaan.html#osis">Organisasi Siswa</a></li>
-      </ul>
-    </li>
+<div class="stat">
+<h3>Total Pendaftar</h3>
+<p id="total">...</p>
+</div>
 
-    <li class="has-dropdown">
-      <a href="#">PPDB ▾</a>
-      <ul class="dropdown">
-        <li><a href="ppdb.html#info">Informasi</a></li>
-        <li><a href="ppdb.html#alur">Alur & Syarat</a></li>
-        <li><a href="ppdb.html">Formulir Online</a></li>
-      </ul>
-    </li>
+<div class="stat">
+<h3>Laki-laki</h3>
+<p id="lk">...</p>
+</div>
 
-    <li><a href="berita.html">Berita</a></li>
-    <li><a href="galeri.html">Galeri</a></li>
-    <li><a href="kontak.html">Kontak</a></li>
+<div class="stat">
+<h3>Perempuan</h3>
+<p id="pr">...</p>
+</div>
 
-  </ul>
-</nav>
- <section class="section">
-	<h2>Statistik PPDB</h2>
-
-	<div class="stat-box">
-    <div class="stat">
-        <h3>Total Pendaftar</h3>
-        <p id="total">...</p>
-    </div>
-
-    <div class="stat">
-        <h3>Laki-laki</h3>
-        <p id="lk">...</p>
-    </div>
-
-    <div class="stat">
-        <h3>Perempuan</h3>
-        <p id="pr">...</p>
-    </div>
-	</div>
+</div>
 
 </section>
+
+<footer>
+© 2026 MTs Ar Rohman 01 Bulu
+</footer>
+
 <script>
+
 fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ30DI4M3yiVU1EziQxlD2DI1ANMRuRONPqFugZ2wZXtga_zW-CYClm8cigjSzJ60b3PBlSKXEzF1Pc/pub?output=csv")
 .then(res => res.text())
 .then(data => {
 
 let rows = data.split("\n").slice(1);
-let total = rows.length;
 
+let total = 0;
 let laki = 0;
 let perempuan = 0;
 
 rows.forEach(r=>{
+
 let col = r.split(",");
 
-if(col[2] == "Laki-laki") laki++;
-if(col[2] == "Perempuan") perempuan++;
+if(col.length > 2){
+
+let jk = col[2].trim();
+
+total++;
+
+if(jk == "Laki-laki") laki++;
+if(jk == "Perempuan") perempuan++;
+
+}
+
 });
 
 document.getElementById("total").innerHTML = total;
-document.getElementById("lk").innerHTML = laki-laki;
+document.getElementById("lk").innerHTML = laki;
 document.getElementById("pr").innerHTML = perempuan;
 
 });
+
 </script>
-    
-<section id="kontak" class="section light">
-    <h2>Kontak</h2>
-    <p>📍 Lambangan Kulon, Bulu, Rembang</p>
-    <p>📞 Bapak Su`udi (+62 813-2633-4045)</p>
-    <p>✉️ mtsaarrohman01bulu@gmail.com</p>
-</section>
 
-<footer>
-    © 2026 MTs Ar Rohman 01 Bulu | Madrasah Hebat Bermartabat
-</footer>
-
-<script src="script.js"></script>
 </body>
+</html>
