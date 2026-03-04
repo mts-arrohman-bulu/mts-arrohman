@@ -1,7 +1,69 @@
-<section class="section">
-<h2>Statistik PPDB</h2>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Akademik - MTs Ar Rohman 01 Bulu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="stat-box">
+<header class="header">
+    <h1>Profil Madrasah</h1>
+</header>
+<nav>
+  <ul class="menu">
+
+    <li><a href="index.html">Beranda</a></li>
+
+    <li class="has-dropdown">
+      <a href="#">Profil ▾</a>
+      <ul class="dropdown">
+        <li><a href="profil.html#sejarah">Sejarah</a></li>
+        <li><a href="profil.html#visi">Visi & Misi</a></li>
+        <li><a href="profil.html#struktur">Struktur Organisasi</a></li>
+        <li><a href="profil.html#guru">Guru & Tendik</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#">Akademik ▾</a>
+      <ul class="dropdown">
+        <li><a href="akademik.html#kurikulum">Kurikulum</a></li>
+        <li><a href="akademik.html#program">Program Unggulan</a></li>
+        <li><a href="akademik.html#jadwal">Jadwal Pelajaran</a></li>
+        <li><a href="akademik.html#kalender">Kalender Akademik</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#">Kesiswaan ▾</a>
+      <ul class="dropdown">
+        <li><a href="kesiswaan.html#ekstra">Ekstrakurikuler</a></li>
+        <li><a href="kesiswaan.html#prestasi">Prestasi</a></li>
+        <li><a href="kesiswaan.html#osis">Organisasi Siswa</a></li>
+      </ul>
+    </li>
+
+    <li class="has-dropdown">
+      <a href="#">PPDB ▾</a>
+      <ul class="dropdown">
+        <li><a href="ppdb.html#info">Informasi</a></li>
+        <li><a href="ppdb.html#alur">Alur & Syarat</a></li>
+        <li><a href="ppdb.html">Formulir Online</a></li>
+      </ul>
+    </li>
+
+    <li><a href="berita.html">Berita</a></li>
+    <li><a href="galeri.html">Galeri</a></li>
+    <li><a href="kontak.html">Kontak</a></li>
+
+  </ul>
+</nav>
+ <section class="section">
+	<h2>Statistik PPDB</h2>
+
+	<div class="stat-box">
     <div class="stat">
         <h3>Total Pendaftar</h3>
         <p id="total">...</p>
@@ -16,7 +78,7 @@
         <h3>Perempuan</h3>
         <p id="pr">...</p>
     </div>
-</div>
+	</div>
 
 </section>
 <script>
@@ -38,8 +100,22 @@ if(col[2] == "Perempuan") perempuan++;
 });
 
 document.getElementById("total").innerHTML = total;
-document.getElementById("lk").innerHTML = laki;
+document.getElementById("lk").innerHTML = laki-laki;
 document.getElementById("pr").innerHTML = perempuan;
 
 });
 </script>
+    
+<section id="kontak" class="section light">
+    <h2>Kontak</h2>
+    <p>📍 Lambangan Kulon, Bulu, Rembang</p>
+    <p>📞 Bapak Su`udi (+62 813-2633-4045)</p>
+    <p>✉️ mtsaarrohman01bulu@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 MTs Ar Rohman 01 Bulu | Madrasah Hebat Bermartabat
+</footer>
+
+<script src="script.js"></script>
+</body>
