@@ -1,0 +1,45 @@
+<section class="section">
+<h2>Statistik PPDB</h2>
+
+<div class="stat-box">
+    <div class="stat">
+        <h3>Total Pendaftar</h3>
+        <p id="total">...</p>
+    </div>
+
+    <div class="stat">
+        <h3>Laki-laki</h3>
+        <p id="lk">...</p>
+    </div>
+
+    <div class="stat">
+        <h3>Perempuan</h3>
+        <p id="pr">...</p>
+    </div>
+</div>
+
+</section>
+<script>
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ30DI4M3yiVU1EziQxlD2DI1ANMRuRONPqFugZ2wZXtga_zW-CYClm8cigjSzJ60b3PBlSKXEzF1Pc/pub?output=csv")
+.then(res => res.text())
+.then(data => {
+
+let rows = data.split("\n").slice(1);
+let total = rows.length;
+
+let laki = 0;
+let perempuan = 0;
+
+rows.forEach(r=>{
+let col = r.split(",");
+
+if(col[2] == "Laki-laki") laki++;
+if(col[2] == "Perempuan") perempuan++;
+});
+
+document.getElementById("total").innerHTML = total;
+document.getElementById("lk").innerHTML = laki;
+document.getElementById("pr").innerHTML = perempuan;
+
+});
+</script>
