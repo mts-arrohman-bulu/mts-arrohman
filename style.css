@@ -250,7 +250,23 @@ cursor:pointer;
 
 .hamburger{
 display:block;
-text-align:right;
+}
+
+.menu{
+display:none;
+flex-direction:column;
+width:100%;
+background:#0a5c2f;
+}
+
+.menu.active{
+display:flex;
+}
+
+}
+  
+nav{
+position:relative;
 }
 
 .menu{
@@ -299,5 +315,6 @@ padding:30px 15px;
 main{
 flex:1;
 }
+
 
 
