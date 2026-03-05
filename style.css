@@ -209,7 +209,60 @@ text-align:center;
 padding:15px;
 margin-top:40px;
 }
+/* RESPONSIVE HP */
+@media (max-width:768px){
 
+/* HEADER */
+.header{
+flex-direction:column;
+text-align:center;
+}
+
+.logo{
+width:90px;
+}
+
+/* MENU */
+nav{
+flex-direction:column;
+}
+
+.menu{
+flex-direction:column;
+width:100%;
+}
+
+.menu li a{
+border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* HERO */
+.hero{
+height:auto;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+/* STATISTIK */
+.stat-box{
+flex-direction:column;
+gap:20px;
+}
+
+.stat{
+width:80%;
+}
+
+/* SECTION */
+.section{
+padding:30px 15px;
+}
+
+}
 main{
 flex:1;
 }
+
