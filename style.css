@@ -10,21 +10,29 @@ min-height:100vh;
 }
 
 /* HEADER */
-.header{
-text-align:center;
-background:linear-gradient(90deg,#27ae60,#2ecc71);
-color:white;
-padding:25px;
+.header {
+    display: flex;
+    align-items: center;   /* supaya logo dan teks sejajar */
+    justify-content: center;
+    gap: 20px;             /* jarak antara logo dan teks */
+    background: #34b36b;   /* warna hijau seperti di gambar */
+    padding: 20px;
+    text-align: left;
 }
 
-.header h1{
-margin:0;
-font-size:36px;
+.logo {
+    width: 80px;   /* ukuran logo */
+    height: auto;
 }
 
-.header p{
-margin-top:5px;
-font-size:16px;
+.header h1 {
+    margin: 0;
+    color: white;
+}
+
+.header p {
+    margin: 5px 0 0 0;
+    color: white;
 }
 
 /* NAVIGATION */
@@ -208,3 +216,4 @@ height:auto;
 display:block;
 margin:auto;
 }
+
