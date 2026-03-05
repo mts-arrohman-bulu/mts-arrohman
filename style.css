@@ -279,7 +279,12 @@ background:#0a5c2f;
 .menu.active{
 display:flex;
 }
-
+  
+@media (min-width:769px){
+.hamburger{
+display:none !important;
+}
+}
 .menu li{
 text-align:center;
 }
@@ -315,6 +320,7 @@ padding:30px 15px;
 main{
 flex:1;
 }
+
 
 
 
