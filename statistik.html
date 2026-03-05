@@ -105,7 +105,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQ30DI4M3yiVU1EziQxlD2DI1
 
 let rows = data.split("\n").slice(1);
 
-let total = 0;
+let total = rows.length;
 let laki = 0;
 let perempuan = 0;
 
@@ -113,16 +113,10 @@ rows.forEach(r=>{
 
 let col = r.split(",");
 
-if(col.length > 2){
-
-let jk = col[2].trim();
-
-total++;
+let jk = col[3].trim();   // kolom D
 
 if(jk == "Laki-laki") laki++;
 if(jk == "Perempuan") perempuan++;
-
-}
 
 });
 
@@ -136,3 +130,4 @@ document.getElementById("pr").innerHTML = perempuan;
 
 </body>
 </html>
+
