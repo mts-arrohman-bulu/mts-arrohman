@@ -361,6 +361,55 @@ transition:opacity 1s ease;
 opacity:1;
 }
 
+/* CARD UNTUK KOTAK PPDB */
+.card{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-left:5px solid #27ae60;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+border-radius:5px;
+}
+
+/* LIST */
+.card ul{
+padding-left:20px;
+line-height:1.7;
+}
+
+.card ol{
+padding-left:20px;
+line-height:1.7;
+}
+
+/* FORM PPDB */
+form{
+margin-top:15px;
+}
+
+form input,
+form select{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+button{
+background:#27ae60;
+color:white;
+border:none;
+padding:12px;
+margin-top:15px;
+width:100%;
+border-radius:4px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1f8a4c;
+}
 
 
 
