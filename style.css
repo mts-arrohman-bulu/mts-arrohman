@@ -217,6 +217,11 @@ font-weight:bold;
 background:#ffd54f;
 }
 
+.btn-utama{
+margin-top:15px;
+display:inline-block;
+}
+
 /* FORM */
 form input,
 form select,
@@ -355,6 +360,7 @@ transition:opacity 1s ease;
 .slide.active{
 opacity:1;
 }
+
 
 
 
