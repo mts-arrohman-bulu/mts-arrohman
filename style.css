@@ -112,13 +112,15 @@ cursor:pointer;
 .hero{
 background:linear-gradient(135deg,#1c7c54,#38b36b);
 color:white;
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
+margin-bottom:40px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 margin-bottom:10px;
+font-weight:bold;
 }
 
 .hero h2{
@@ -140,6 +142,10 @@ margin:auto;
 text-align:left;
 }
 
+.section p{
+line-height:1.7;
+font-size:16px;
+}
 .section h2{
 text-align:center;
 color:#1c7c54;
@@ -296,4 +302,5 @@ padding:30px 15px;
 }
 
 }
+
 
