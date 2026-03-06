@@ -361,7 +361,7 @@ transition:opacity 1s ease;
 opacity:1;
 }
 
-/* CARD UNTUK KOTAK PPDB */
+/* CARD PPDB */
 .card{
 background:white;
 padding:25px;
@@ -372,19 +372,15 @@ border-radius:5px;
 }
 
 /* LIST */
-.card ul{
-padding-left:20px;
-line-height:1.7;
-}
-
+.card ul,
 .card ol{
 padding-left:20px;
 line-height:1.7;
 }
 
-/* FORM PPDB */
+/* FORM */
 form{
-margin-top:15px;
+margin-top:20px;
 }
 
 form input,
