@@ -1,75 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>PPDB - MTs Ar Rohman 01 Bulu</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="header">
-    <img src="logo.png" class="logo">
-    <div>
-        <h1>PPDB Online</h1>
-        <p>MTs Ar Rohman 01 Bulu</p>
-    </div>
-</header>
-
-<nav>
-<ul class="menu">
-
-    <li><a href="index.html">Beranda</a></li>
-
-    <li class="has-dropdown">
-      <a href="#">Profil ▾</a>
-      <ul class="dropdown">
-        <li><a href="profil.html#sejarah">Sejarah</a></li>
-        <li><a href="profil.html#visi">Visi & Misi</a></li>
-        <li><a href="profil.html#struktur">Struktur Organisasi</a></li>
-        <li><a href="profil.html#guru">Guru & Tendik</a></li>
-      </ul>
-    </li>
-
-    <li class="has-dropdown">
-      <a href="#">Akademik ▾</a>
-      <ul class="dropdown">
-        <li><a href="akademik.html#kurikulum">Kurikulum</a></li>
-        <li><a href="akademik.html#program">Program Unggulan</a></li>
-        <li><a href="akademik.html#jadwal">Jadwal Pelajaran</a></li>
-        <li><a href="akademik.html#kalender">Kalender Akademik</a></li>
-      </ul>
-    </li>
-
-    <li class="has-dropdown">
-      <a href="#">Kesiswaan ▾</a>
-      <ul class="dropdown">
-        <li><a href="kesiswaan.html#ekstra">Ekstrakurikuler</a></li>
-        <li><a href="kesiswaan.html#prestasi">Prestasi</a></li>
-        <li><a href="kesiswaan.html#osis">Organisasi Siswa</a></li>
-      </ul>
-    </li>
-
-    <li class="has-dropdown">
-      <a href="#">PPDB ▾</a>
-      <ul class="dropdown">
-        <li><a href="ppdb.html#info">Informasi</a></li>
-        <li><a href="ppdb.html#alur">Alur & Syarat</a></li>
-        <li><a href="statistik.html">Statistik PPDB</a></li>
-        <li><a href="ppdb.html#ppdbForm">Formulir Online</a></li>
-          <li>
-     </ul>
-    </li>
-
-    <li><a href="https://mts-arrohman-bulu.github.io/info-madrasah/" target="_blank">MTs News</a></li>
-    <li><a href="kontak.html">Kontak</a></li>
-  </ul>
-</nav>
-
+<!-- INFORMASI PPDB -->
 <section id="info" class="section">
 
 <h2>Informasi PPDB</h2>
+
+<div class="card">
 
 <p>
 Penerimaan Peserta Didik Baru (PPDB) MTs AR Rohman 01 Bulu
@@ -78,18 +12,25 @@ berkualitas berbasis nilai-nilai Islam.
 </p>
 
 <ul>
-<li>Tahun Pelajaran : 2026 / 2027</li>
-<li>Gelombang 1 : Januari – Maret</li>
-<li>Gelombang 2 : April – Juni</li>
-<li>Tempat : MTs AR Rohman 01 Bulu</li>
+<li><b>Tahun Pelajaran :</b> 2026 / 2027</li>
+<li><b>Gelombang 1 :</b> Januari – Maret</li>
+<li><b>Gelombang 2 :</b> April – Juni</li>
+<li><b>Tempat :</b> MTs AR Rohman 01 Bulu</li>
 </ul>
-<a href="ppdb.html#ppdbForm" class="btn-utama">Isi Formulir PPDB</a>
+
+<a href="#ppdbForm" class="btn-utama">Isi Formulir PPDB</a>
+
+</div>
 
 </section>
 
+
+<!-- ALUR DAN SYARAT -->
 <section id="alur" class="section">
 
 <h2>Alur & Syarat PPDB</h2>
+
+<div class="card">
 
 <h3>Alur Pendaftaran</h3>
 
@@ -100,27 +41,39 @@ berkualitas berbasis nilai-nilai Islam.
 <li>Pengumuman hasil seleksi</li>
 </ol>
 
+</div>
+
+<div class="card">
+
 <h3>Syarat Pendaftaran</h3>
 
 <ul>
-<li>Fotokopi ijazah / surat keterangan lulus</li>
-<li>Fotokopi kartu keluarga</li>
-<li>Fotokopi akta kelahiran</li>
+<li>Fotokopi Ijazah / SKL</li>
+<li>Fotokopi Kartu Keluarga</li>
+<li>Fotokopi Akta Kelahiran</li>
 <li>Pas foto terbaru</li>
 </ul>
 
+</div>
+
 </section>
 
-<section class="section">
-    <h2>Form Pendaftaran</h2>
 
-    <form id="ppdbForm">
-        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+<!-- FORM PENDAFTARAN -->
+<section class="section">
+
+<h2>Formulir Pendaftaran Online</h2>
+
+<div class="card">
+
+<form id="ppdbForm">
+
+<input type="text" name="nama" placeholder="Nama Lengkap" required>
 
 <select name="jk" required>
-  <option value="">Jenis Kelamin</option>
-  <option>Laki-laki</option>
-  <option>Perempuan</option>
+<option value="">Jenis Kelamin</option>
+<option>Laki-laki</option>
+<option>Perempuan</option>
 </select>
 
 <input type="text" name="tempat_lahir" placeholder="Tempat Lahir" required>
@@ -144,14 +97,11 @@ berkualitas berbasis nilai-nilai Islam.
 <input type="tel" name="hp" placeholder="No HP Orang Tua" required>
 
 <button type="submit">Kirim Pendaftaran</button>
-<p id="notif"></p>
-</form>
-</section>
 
-...
-<footer>
-© 2026 MTs Ar Rohman 01 Bulu | Madrasah Hebat Bermartabat
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+<p id="notif"></p>
+
+</form>
+
+</div>
+
+</section>
