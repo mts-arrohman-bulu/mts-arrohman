@@ -272,6 +272,12 @@ text-align:center;
 .logo{
 width:90px;
 }
+  
+.logo-sekolah{
+width:120px;
+display:block;
+margin:0 auto 15px;
+}
 
 /* NAVBAR */
 nav{
