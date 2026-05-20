@@ -5,70 +5,153 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pengumuman Kelulusan</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-body{
-background:#f5f5f5;
-font-family:Arial, sans-serif;
-}
-
+/* BOX UTAMA */
 .box-kelulusan{
-max-width:600px;
-margin:60px auto;
+max-width:650px;
+margin:50px auto;
 background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
+/* JUDUL */
 .judul{
 text-align:center;
 margin-bottom:30px;
 }
 
-.judul h2{
-margin:0;
+/* LOGO */
+.logo-sekolah{
+display:block;
+margin:0 auto 15px;
+filter:drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+}
+
+/* JUDUL */
+.judul h1{
+font-size:34px;
 font-weight:bold;
-color:#0E487A;
+color:#0a5c2f;
+margin-bottom:10px;
+}
+
+.judul h2{
+font-size:24px;
+margin-bottom:10px;
+color:#333;
 }
 
 .judul p{
-margin-top:10px;
 font-size:16px;
+line-height:28px;
+color:#444;
 }
 
-.hasil{
-margin-top:30px;
-padding:20px;
+/* FORM */
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+font-weight:bold;
+margin-bottom:8px;
+display:block;
+}
+
+.form-control{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
 border-radius:8px;
-display:none;
+font-size:16px;
+box-sizing:border-box;
 }
 
-.lulus{
-background:#dff0d8;
-color:#3c763d;
+/* INFO FORMAT */
+.info-format{
+margin-top:8px;
+font-size:13px;
+color:#c0392b;
 }
 
-.tidak-lulus{
-background:#f2dede;
-color:#a94442;
-}
-
-.error{
-background:#fcf8e3;
-color:#8a6d3b;
-}
-
+/* BUTTON */
 .btn-primary{
 width:100%;
+background:#0a5c2f;
+color:white;
+border:none;
+padding:14px;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
 }
 
-.info-format{
-margin-top:10px;
-color:red;
-font-size:13px;
+.btn-primary:hover{
+background:#0d7a40;
+}
+
+/* HASIL */
+.hasil{
+margin-top:30px;
+padding:25px;
+border-radius:12px;
+display:none;
+line-height:30px;
+}
+
+/* LULUS */
+.lulus{
+background:#eafaf1;
+border:2px solid #27ae60;
+color:#145a32;
+}
+
+/* TIDAK LULUS */
+.tidak-lulus{
+background:#fdecea;
+border:2px solid #e74c3c;
+color:#922b21;
+}
+
+/* ERROR */
+.error{
+background:#fff8e1;
+border:2px solid #f1c40f;
+color:#7d6608;
+}
+
+/* JUDUL HASIL */
+.hasil h3{
+font-size:38px;
+font-weight:bold;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+.box-kelulusan{
+margin:20px;
+padding:25px;
+}
+
+.judul h1{
+font-size:28px;
+}
+
+.hasil h3{
+font-size:30px;
+}
+
 }
 
 </style>
@@ -76,8 +159,6 @@ font-size:13px;
 </head>
 
 <body>
-
-<div class="container">
 
 <div class="box-kelulusan">
 
@@ -89,23 +170,27 @@ style="width:150px;height:auto;">
 
 <h1>PENGUMUMAN KELULUSAN</h1>
 
-<p>
 <h2>MTs AR ROHMAN 1 BULU</h2>
+
+<p>
 Tahun Ajaran 2025/2026
 </p>
 
 </div>
 
 <div class="form-group">
+
 <label>Masukkan NISN</label>
 
 <input type="text"
 id="nisn"
 class="form-control"
 placeholder="Masukkan NISN">
+
 </div>
 
 <div class="form-group">
+
 <label>Masukkan Tanggal Lahir</label>
 
 <input type="text"
@@ -119,7 +204,7 @@ Format tanggal lahir: dd/mm/yyyy
 
 </div>
 
-<button class="btn btn-primary btn-lg"
+<button class="btn-primary"
 onclick="cekKelulusan()">
 
 CEK KELULUSAN
@@ -130,13 +215,11 @@ CEK KELULUSAN
 
 </div>
 
-</div>
-
 <script>
 
 let dataSiswa = [];
 
-/* BACA FILE CSV */
+/* BACA CSV */
 
 fetch('data_kelulusan.csv')
 
@@ -163,7 +246,6 @@ status: cols[3]?.trim()
 
 });
 
-
 /* CEK KELULUSAN */
 
 function cekKelulusan(){
@@ -181,7 +263,6 @@ item.tgl === tgl;
 
 });
 
-
 if(ditemukan){
 
 if(ditemukan.status === "LULUS"){
@@ -198,7 +279,10 @@ hasil.style.display = "block";
 
 hasil.innerHTML = `
 
-<h3>${ditemukan.status}</h3>
+<h3>
+🎉 SELAMAT 🎉<br>
+${ditemukan.status}
+</h3>
 
 <p>
 
@@ -210,7 +294,7 @@ hasil.innerHTML = `
 
 <hr>
 
-<p style="font-size:16px; line-height:28px;">
+<p style="font-size:16px; line-height:30px;">
 
 Alhamdulillah, selamat kamu telah dinyatakan <b>LULUS</b>.
 Segala lelah, usaha, dan doa yang kamu lakukan selama ini akhirnya terbayar sudah.
