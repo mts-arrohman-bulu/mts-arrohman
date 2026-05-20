@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pengumuman Kelulusan</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+
+body{
+background:#f5f5f5;
+font-family:Arial, sans-serif;
+}
+
+.box-kelulusan{
+max-width:600px;
+margin:60px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.judul{
+text-align:center;
+margin-bottom:30px;
+}
+
+.judul h2{
+margin:0;
+font-weight:bold;
+color:#0E487A;
+}
+
+.judul p{
+margin-top:10px;
+font-size:16px;
+}
+
+.hasil{
+margin-top:30px;
+padding:20px;
+border-radius:8px;
+display:none;
+}
+
+.lulus{
+background:#dff0d8;
+color:#3c763d;
+}
+
+.tidak-lulus{
+background:#f2dede;
+color:#a94442;
+}
+
+.error{
+background:#fcf8e3;
+color:#8a6d3b;
+}
+
+.btn-primary{
+width:100%;
+}
+
+.info-format{
+margin-top:10px;
+color:red;
+font-size:13px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="box-kelulusan">
+
+<div class="judul">
+<h2>PENGUMUMAN KELULUSAN</h2>
+
+<p>
+MTs AR ROHMAN 1 BULU<br>
+Tahun Ajaran 2025/2026
+</p>
+</div>
+
+<div class="form-group">
+<label>Masukkan NISN</label>
+
+<input type="text"
+id="nisn"
+class="form-control"
+placeholder="Masukkan NISN">
+</div>
+
+<div class="form-group">
+<label>Masukkan Tanggal Lahir</label>
+
+<input type="text"
+id="tgl"
+class="form-control"
+placeholder="dd/mm/yyyy">
+
+<p class="info-format">
+Format tanggal lahir: dd/mm/yyyy
+</p>
+
+</div>
+
+<button class="btn btn-primary btn-lg"
+onclick="cekKelulusan()">
+
+CEK KELULUSAN
+
+</button>
+
+<div id="hasil" class="hasil"></div>
+
+</div>
+
+</div>
+
+<script>
+
+let dataSiswa = [];
+
+/* BACA FILE CSV */
+
+fetch('data_kelulusan.csv')
+
+.then(response => response.text())
+
+.then(data => {
+
+const rows = data.split('\n').slice(1);
+
+dataSiswa = rows.map(row => {
+
+const cols = row.split(',');
+
+return {
+
+nisn: cols[0]?.trim(),
+tgl: cols[1]?.trim(),
+nama: cols[2]?.trim(),
+status: cols[3]?.trim()
+
+};
+
+});
+
+});
+
+
+/* CEK KELULUSAN */
+
+function cekKelulusan(){
+
+let nisn = document.getElementById("nisn").value.trim();
+
+let tgl = document.getElementById("tgl").value.trim();
+
+let hasil = document.getElementById("hasil");
+
+let ditemukan = dataSiswa.find(function(item){
+
+return item.nisn === nisn &&
+item.tgl === tgl;
+
+});
+
+
+if(ditemukan){
+
+if(ditemukan.status === "LULUS"){
+
+hasil.className = "hasil lulus";
+
+}else{
+
+hasil.className = "hasil tidak-lulus";
+
+}
+
+hasil.style.display = "block";
+
+hasil.innerHTML = `
+
+<h3>${ditemukan.status}</h3>
+
+<p>
+
+<b>Nama:</b> ${ditemukan.nama}<br>
+
+<b>NISN:</b> ${ditemukan.nisn}
+
+</p>
+
+`;
+
+}else{
+
+hasil.className = "hasil error";
+
+hasil.style.display = "block";
+
+hasil.innerHTML = `
+
+<h3>Data Tidak Ditemukan</h3>
+
+<p>
+Periksa kembali NISN dan tanggal lahir.
+</p>
+
+`;
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
