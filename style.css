@@ -1,339 +1,7 @@
 /* RESET */
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#f4f6f9;
-display:flex;
-flex-direction:column;
-min-height:100vh;
-}
-
-main{
-flex:1;
-}
-
-/* HEADER */
-.header{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:25px;
-background:#38b36b;
-padding:25px;
-}
-
-.header div{
-text-align:left;
-}
-
-.header h1{
-margin:0;
-font-size:32px;
-}
-
-.header p{
-margin:5px 0 0 0;
-}
-
-.logo{
-width:120px;
-}
-
-/* NAVBAR */
-nav{
-display:flex;
-justify-content:center;
-align-items:center;
-background:#0a5c2f;
-position:relative;
-z-index:1000;
-box-shadow:0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* MENU */
-.menu{
-list-style:none;
-display:flex;
-padding:0;
-margin:0;
-}
-
-.menu li{
-position:relative;
-}
-
-.menu li a{
-display:block;
-padding:15px 20px;
-color:white;
-text-decoration:none;
-font-weight:500;
-}
-
-.menu li a:hover{
-background:#0d7a40;
-}
-
-/* DROPDOWN */
-.dropdown{
-display:none;
-position:absolute;
-top:100%;
-left:0;
-background:white;
-min-width:200px;
-list-style:none;
-padding:0;
-margin:0;
-box-shadow:0 4px 8px rgba(0,0,0,0.1);
-z-index:2000;
-}
-
-.dropdown li a{
-color:black;
-padding:10px 15px;
-}
-
-.dropdown li a:hover{
-background:#f0f0f0;
-}
-
-.has-dropdown:hover .dropdown{
-display:block;
-}
-
-/* HAMBURGER */
-.hamburger{
-display:none;
-font-size:28px;
-color:white;
-padding:15px;
-cursor:pointer;
-}
-
-/* SLIDER */
-.slider{
-width:100%;
-overflow:hidden;
-position:relative;
-z-index:1;
-}
-
-.slides{
-position:relative;
-width:100%;
-height:400px;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity 1s ease;
-}
-
-.slide.active{
-opacity:1;
-}
-
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#1c7c54,#38b36b);
-color:white;
-padding:50px 20px;
-text-align:center;
-margin-bottom:40px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:10px;
-font-weight:bold;
-}
-
-.hero h2{
-font-size:26px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-max-width:700px;
-margin:auto;
-margin-bottom:10px;
-}
-
-.hero .btn-utama{
-margin-top:25px;
-display:inline-block;
-}
-
-/* SECTION */
-.section{
-padding:40px 20px;
-max-width:900px;
-margin:auto;
-text-align:left;
-}
-
-.section h2{
-text-align:center;
-color:#1c7c54;
-margin-bottom:20px;
-}
-
-.section p{
-line-height:1.7;
-font-size:16px;
-}
-
-/* CARD */
-.card{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-left:5px solid #27ae60;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
-border-radius:5px;
-}
-
-/* LIST */
-.card ul,
-.card ol{
-padding-left:20px;
-line-height:1.7;
-}
-
-/* BUTTON */
-.btn-utama{
-background:#f4b400;
-color:black;
-padding:12px 25px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-display:inline-block;
-}
-
-.btn-utama:hover{
-background:#ffd54f;
-}
-
-/* FORM */
-form{
-margin-top:20px;
-}
-
-form input,
-form select,
-form textarea{
-width:100%;
-padding:10px;
-margin-top:10px;
-border:1px solid #ccc;
-border-radius:4px;
-}
-
-button{
-background:#27ae60;
-color:white;
-border:none;
-padding:12px;
-margin-top:15px;
-width:100%;
-border-radius:4px;
-cursor:pointer;
-}
-
-button:hover{
-background:#1f8a4c;
-}
-
-/* FOOTER */
-footer{
-background:#145a32;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media (max-width:768px){
-
-/* HEADER */
-.header{
-flex-direction:column;
-text-align:center;
-}
-
-.logo{
-width:90px;
-}
-
-.logo-sekolah{
-width:80px;
-display:block;
-margin:0 auto 15px;
-filter:drop-shadow(0 2px 3px rgba(0,0,0,0.3));
-}
-  
-/* NAVBAR */
-nav{
-flex-direction:column;
-align-items:flex-start;
-}
-
-/* HAMBURGER */
-.hamburger{
-display:block;
-}
-
-/* MENU */
-.menu{
-display:none;
-flex-direction:column;
-width:100%;
-background:#0a5c2f;
-}
-
-.menu.active{
-display:flex;
-}
-
-.menu li{
-width:100%;
-text-align:center;
-}
-
-.menu li a{
-border-top:1px solid rgba(255,255,255,0.2);
-}
-
-/* SLIDER */
-.slides{
-height:220px;
-}
-
-/* HERO */
-.hero{
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-/* SECTION */
-.section{
-padding:30px 15px;
-}
-
-}
-
-body{
+font-family:Arial,sans-serif;
 background:
 linear-gradient(rgba(255,255,255,0.92),
 rgba(255,255,255,0.92)),
@@ -341,24 +9,151 @@ url('aset/img/bg-islami.jpg');
 
 background-size:cover;
 background-attachment:fixed;
-font-family:Arial,sans-serif;
+min-height:100vh;
+display:flex;
+flex-direction:column;
 }
 
+/* CONTAINER */
+.box-kelulusan{
+max-width:650px;
+margin:50px auto;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* JUDUL */
+.judul{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* LOGO */
 .logo-sekolah{
-width:110px;
-margin-bottom:15px;
+width:70px !important;
+height:auto !important;
+display:block;
+margin:0 auto 15px;
+filter:drop-shadow(0 2px 3px rgba(0,0,0,0.3));
 }
 
+/* JUDUL */
 .judul h2{
 font-size:34px;
 font-weight:bold;
-color:#0E487A;
+color:#0a5c2f;
 margin-bottom:10px;
 }
 
+.judul p{
+font-size:16px;
+line-height:28px;
+color:#444;
+}
+
+/* FORM */
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+font-weight:bold;
+margin-bottom:8px;
+display:block;
+}
+
+.form-control{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+/* INFO FORMAT */
+.info-format{
+margin-top:8px;
+font-size:13px;
+color:#c0392b;
+}
+
+/* BUTTON */
+.btn-primary{
+width:100%;
+background:#0a5c2f;
+color:white;
+border:none;
+padding:14px;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-primary:hover{
+background:#0d7a40;
+}
+
+/* HASIL */
+.hasil{
+margin-top:30px;
+padding:25px;
+border-radius:12px;
+display:none;
+line-height:30px;
+}
+
+/* LULUS */
+.lulus{
+background:#eafaf1;
+border:2px solid #27ae60;
+color:#145a32;
+}
+
+/* TIDAK LULUS */
+.tidak-lulus{
+background:#fdecea;
+border:2px solid #e74c3c;
+color:#922b21;
+}
+
+/* ERROR */
+.error{
+background:#fff8e1;
+border:2px solid #f1c40f;
+color:#7d6608;
+}
+
+/* JUDUL HASIL */
 .hasil h3{
 font-size:38px;
 font-weight:bold;
 text-align:center;
 margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+.box-kelulusan{
+margin:20px;
+padding:25px;
+}
+
+.judul h2{
+font-size:28px;
+}
+
+.hasil h3{
+font-size:30px;
+}
+
+.logo-sekolah{
+width:60px !important;
+}
+
 }
