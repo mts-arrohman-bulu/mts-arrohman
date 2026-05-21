@@ -263,7 +263,6 @@ margin-top:40px;
 /* RESPONSIVE */
 @media (max-width:768px){
 
-/* HEADER */
 .header{
 flex-direction:column;
 text-align:center;
@@ -273,18 +272,15 @@ text-align:center;
 width:90px;
 }
 
-/* NAVBAR */
 nav{
 flex-direction:column;
 align-items:flex-start;
 }
 
-/* HAMBURGER */
 .hamburger{
 display:block;
 }
 
-/* MENU */
 .menu{
 display:none;
 flex-direction:column;
@@ -305,12 +301,10 @@ text-align:center;
 border-top:1px solid rgba(255,255,255,0.2);
 }
 
-/* SLIDER */
 .slides{
 height:220px;
 }
 
-/* HERO */
 .hero{
 padding:60px 20px;
 }
@@ -319,7 +313,6 @@ padding:60px 20px;
 font-size:32px;
 }
 
-/* SECTION */
 .section{
 padding:30px 15px;
 }
