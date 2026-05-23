@@ -182,10 +182,12 @@ Tahun Ajaran 2025/2026
 
 <label>Masukkan NISN</label>
 
-<input type="text"
+<input
+type="text"
 id="nisn"
 class="form-control"
-placeholder="Masukkan NISN">
+placeholder="Masukkan NISN"
+required>
 
 </div>
 
@@ -193,10 +195,12 @@ placeholder="Masukkan NISN">
 
 <label>Masukkan Tanggal Lahir</label>
 
-<input type="text"
+<input
+type="text"
 id="tgl"
 class="form-control"
-placeholder="dd/mm/yyyy">
+placeholder="dd/mm/yyyy"
+required>
 
 <p class="info-format">
 Format tanggal lahir: dd/mm/yyyy
@@ -204,8 +208,9 @@ Format tanggal lahir: dd/mm/yyyy
 
 </div>
 
-<button class="btn-primary"
-onclick="cekKelulusan()">
+<button
+class="btn-primary"
+onclick="validasiForm()">
 
 CEK KELULUSAN
 
@@ -246,6 +251,42 @@ status: cols[3]?.trim()
 
 });
 
+/* VALIDASI FORM */
+
+function validasiForm(){
+
+let nisn =
+document.getElementById("nisn");
+
+let tgl =
+document.getElementById("tgl");
+
+let hasil =
+document.getElementById("hasil");
+
+/* reset hasil lama */
+hasil.style.display="none";
+
+if(!nisn.checkValidity()){
+
+nisn.reportValidity();
+
+return;
+
+}
+
+if(!tgl.checkValidity()){
+
+tgl.reportValidity();
+
+return;
+
+}
+
+cekKelulusan();
+
+}
+  
 /* CEK KELULUSAN */
 
 function cekKelulusan(){
