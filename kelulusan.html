@@ -320,56 +320,122 @@ hasil.style.display = "block";
 
 hasil.innerHTML = `
 
-<h3>
-🎉 SELAMAT 🎉<br>
+<div class="hasil-card">
+
+<div class="header-lulus">
+
+<img
+src="logo.png"
+class="logo-hasil">
+
+<p class="tahun">
+Tahun Pelajaran 2025/2026
+</p>
+
+<div class="status">
+
+<div class="status-kecil">
+DINYATAKAN
+</div>
+
+<div class="status-besar">
 ${ditemukan.status}
-</h3>
+</div>
 
-<p>
+</div>
 
-<b>Nama:</b> ${ditemukan.nama}<br>
+</div>
 
-<b>NISN:</b> ${ditemukan.nisn}
 
-</p>
+<div class="data-box">
 
-<hr>
+<div class="judul-data">
+DATA SISWA
+</div>
 
-<p style="font-size:16px; line-height:30px;">
+<div class="data-item">
 
-Alhamdulillah, selamat kamu telah dinyatakan <b>LULUS</b>.
+<label>Nama Lengkap</label>
 
-<br><br>
+<div class="isi">
+${ditemukan.nama}
+</div>
 
-Segala lelah, usaha, dan doa yang kamu lakukan selama ini akhirnya terbayar sudah.
-Kami bangga sekali melihatmu berhasil sampai di titik ini.
+</div>
 
-<br><br>
+<div class="grid">
 
-Jadikan kelulusan ini sebagai awal dari perjalanan panjang meraih cita-cita.
-Tetaplah semangat, jangan pernah berhenti belajar, dan selalu ingat untuk menjadi pribadi yang baik dan bermanfaat ke mana pun kamu melangkah.
+<div>
 
-<br><br>
+<label>NISN</label>
 
-Sukses dan bahagia selalu untukmu 😊
+<div class="isi">
+${ditemukan.nisn}
+</div>
 
-</p>
+</div>
 
-`;
+<div>
 
-}else{
+<label>Kelas</label>
 
-hasil.className = "hasil error";
+<div class="isi">
+IX
+</div>
 
-hasil.style.display = "block";
+</div>
 
-hasil.innerHTML = `
+</div>
 
-<h3>Data Tidak Ditemukan</h3>
+<div>
 
-<p>
-Periksa kembali NISN dan tanggal lahir.
-</p>
+<label>Tanggal Lahir</label>
+
+<div class="isi">
+${ditemukan.tgl}
+</div>
+
+</div>
+
+</div>
+
+
+<div class="ucapan">
+
+<b>Alhamdulillah.</b>
+
+Selamat kamu telah dinyatakan
+<b>LULUS</b>.
+
+Segala lelah,
+usaha,
+dan doa yang kamu lakukan
+akhirnya terbayar.
+
+Teruslah melangkah,
+raih cita-cita,
+dan jadilah pribadi yang
+bermanfaat.
+
+</div>
+
+
+<div class="verifikasi">
+
+Dokumen digital terverifikasi
+
+</div>
+
+
+<button
+class="cek-lagi"
+onclick="location.reload()">
+
+← Cek Siswa Lain
+
+</button>
+
+</div>
 
 `;
 
