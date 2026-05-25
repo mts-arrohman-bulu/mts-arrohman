@@ -375,27 +375,139 @@ background:#f2f2f2;
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE HP */
 
 @media(max-width:768px){
 
+body{
+padding:10px;
+}
+
 .box-kelulusan{
 
-margin:15px;
+margin:10px auto;
 
-padding:25px;
+padding:22px;
+
+border-radius:18px;
+
+}
+
+.logo-sekolah{
+
+width:60px !important;
+
+}
+
+.judul h1{
+
+font-size:24px;
+
+line-height:34px;
+
+}
+
+.judul h2{
+
+font-size:18px;
+
+}
+
+.judul p{
+
+font-size:14px;
+
+}
+
+.form-control{
+
+padding:12px;
+
+font-size:15px;
+
+}
+
+.btn-primary{
+
+padding:14px;
+
+font-size:16px;
+
+}
+
+.hasil-card{
+
+padding:22px;
+
+border-radius:18px;
+
+}
+
+.logo-hasil{
+
+width:70px;
+
+}
+
+.status-kecil{
+
+font-size:14px;
+
+letter-spacing:2px;
 
 }
 
 .status-besar{
 
-font-size:40px;
+font-size:34px;
+
+line-height:42px;
+
+}
+
+.data-box{
+
+padding:18px;
 
 }
 
 .grid{
 
 grid-template-columns:1fr;
+
+gap:12px;
+
+}
+
+.isi{
+
+font-size:16px;
+
+word-break:break-word;
+
+}
+
+.ucapan{
+
+font-size:14px;
+
+line-height:28px;
+
+text-align:left;
+
+}
+
+.verifikasi{
+
+font-size:13px;
+
+}
+
+.cek-lagi{
+
+padding:14px;
+
+font-size:15px;
 
 }
 
