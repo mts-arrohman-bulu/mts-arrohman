@@ -318,7 +318,7 @@ hasil.className = "hasil tidak-lulus";
 
 hasil.style.display = "block";
 
-hasil.innerHTML = `
+hasil.innerHTML=`
 
 <div class="hasil-card">
 
@@ -327,6 +327,10 @@ hasil.innerHTML = `
 <img
 src="logo.png"
 class="logo-hasil">
+
+<h2>
+MTs AR ROHMAN 1 BULU
+</h2>
 
 <p class="tahun">
 Tahun Pelajaran 2025/2026
@@ -339,7 +343,9 @@ DINYATAKAN
 </div>
 
 <div class="status-besar">
+
 ${ditemukan.status}
+
 </div>
 
 </div>
@@ -350,7 +356,9 @@ ${ditemukan.status}
 <div class="data-box">
 
 <div class="judul-data">
-DATA SISWA
+
+👤 DATA SISWA
+
 </div>
 
 <div class="data-item">
@@ -358,10 +366,13 @@ DATA SISWA
 <label>Nama Lengkap</label>
 
 <div class="isi">
+
 ${ditemukan.nama}
+
 </div>
 
 </div>
+
 
 <div class="grid">
 
@@ -370,7 +381,9 @@ ${ditemukan.nama}
 <label>NISN</label>
 
 <div class="isi">
+
 ${ditemukan.nisn}
+
 </div>
 
 </div>
@@ -380,19 +393,24 @@ ${ditemukan.nisn}
 <label>Kelas</label>
 
 <div class="isi">
+
 IX
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 
 <div>
 
 <label>Tanggal Lahir</label>
 
 <div class="isi">
+
 ${ditemukan.tgl}
+
 </div>
 
 </div>
@@ -402,27 +420,44 @@ ${ditemukan.tgl}
 
 <div class="ucapan">
 
-<b>Alhamdulillah.</b>
+<h3>
 
-Selamat kamu telah dinyatakan
-<b>LULUS</b>.
+Alhamdulillah, Selamat!
 
-Segala lelah,
-usaha,
-dan doa yang kamu lakukan
-akhirnya terbayar.
+</h3>
 
-Teruslah melangkah,
+<p>
+
+Kamu telah dinyatakan
+<b>LULUS</b>
+dari
+
+<b>
+MTs AR ROHMAN 1 BULU
+</b>
+
+Tahun Pelajaran
+2025/2026.
+
+<br><br>
+
+Teruslah belajar,
 raih cita-cita,
-dan jadilah pribadi yang
-bermanfaat.
+dan jadilah pribadi
+yang bermanfaat.
+
+</p>
 
 </div>
 
 
 <div class="verifikasi">
 
-Dokumen digital terverifikasi
+Dokumen digital ini terverifikasi
+
+<br>
+
+${new Date().toLocaleDateString('id-ID')}
 
 </div>
 
@@ -434,6 +469,7 @@ onclick="location.reload()">
 ← Cek Siswa Lain
 
 </button>
+
 
 </div>
 
