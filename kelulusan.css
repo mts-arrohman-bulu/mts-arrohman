@@ -176,20 +176,24 @@ display:none;
 
 background:
 linear-gradient(
-180deg,
-#12734A,
-#0A5C2F
+145deg,
+#05814B,
+#066038
 );
 
 color:white;
 
-padding:28px 22px;
+padding:26px;
 
-border-radius:24px;
+border-radius:30px;
 
-max-width:100%;
+overflow:hidden;
 
-box-sizing:border-box;
+position:relative;
+
+box-shadow:
+0 12px 35px
+rgba(0,0,0,.18);
 
 }
 
@@ -256,11 +260,15 @@ background:white;
 
 color:#333;
 
-padding:20px;
+padding:26px;
 
-border-radius:18px;
+border-radius:26px;
 
-margin-top:20px;
+margin-top:25px;
+
+box-shadow:
+0 6px 20px
+rgba(0,0,0,.08);
 
 }
 
@@ -382,69 +390,103 @@ background:#f2f2f2;
 
 .box-kelulusan{
 
-width:auto;
+padding:10px;
 
-margin:12px;
+margin:0;
 
-padding:20px;
+background:none;
+
+box-shadow:none;
+
+}
+
+.hasil-card{
+
+padding:24px;
+
+border-radius:28px;
 
 }
 
 .logo-hasil{
 
-width:65px;
+width:75px;
 
 }
 
 .status-kecil{
 
-font-size:14px;
+font-size:16px;
 
-letter-spacing:3px;
+letter-spacing:5px;
 
 }
 
 .status-besar{
 
-font-size:52px;
+font-size:72px;
+
+line-height:80px;
 
 }
 
 .data-box{
 
-padding:18px;
+padding:20px;
+
+border-radius:22px;
 
 }
 
 .grid{
 
+display:grid;
+
 grid-template-columns:1fr 1fr;
 
-gap:10px;
+gap:16px;
+
+}
+
+.data-box label{
+
+font-size:14px;
 
 }
 
 .isi{
 
-font-size:17px;
+font-size:18px;
 
-line-height:28px;
+line-height:34px;
 
 }
 
 .ucapan{
 
-font-size:15px;
+font-size:18px;
 
-line-height:28px;
+line-height:34px;
 
 text-align:left;
 
 }
 
+.verifikasi{
+
+font-size:14px;
+
+padding:16px;
+
+}
+
 .cek-lagi{
 
-padding:14px;
+padding:18px;
+
+font-size:20px;
+
+border-radius:14px;
 
 }
 
