@@ -241,17 +241,13 @@ letter-spacing:5px;
 
 .status-besar{
 
-font-size:64px;
+font-size:56px;
 
-line-height:70px;
+font-weight:bold;
 
-font-family:
+margin-top:8px;
 
-Arial,
-
-sans-serif;
-
-font-weight:800;
+color:#FFD54F;
 
 }
 
@@ -308,11 +304,13 @@ margin-bottom:5px;
 
 .isi{
 
-font-size:16px;
+font-size:18px;
 
-line-height:26px;
+font-weight:700;
 
-word-break:normal;
+line-height:30px;
+
+word-break:break-word;
 
 }
 
@@ -404,18 +402,9 @@ box-shadow:none;
 
 .hasil-card{
 
-background:
-linear-gradient(
-180deg,
-#0C8A51,
-#066139
-);
+padding:24px;
 
-padding:28px;
-
-border-radius:30px;
-
-color:white;
+border-radius:28px;
 
 }
 
@@ -469,39 +458,15 @@ font-size:14px;
 
 font-size:18px;
 
-font-weight:700;
-
-line-height:28px;
-
-font-family:
-
-Arial,
-
-sans-serif;
+line-height:34px;
 
 }
 
 .ucapan{
 
-background:
+font-size:18px;
 
-rgba(255,255,255,.12);
-
-padding:20px;
-
-border-radius:18px;
-
-margin-top:25px;
-
-line-height:32px;
-
-font-size:16px;
-
-font-family:
-
-Arial,
-
-sans-serif;
+line-height:34px;
 
 text-align:left;
 
@@ -612,15 +577,5 @@ font-size:18px;
 line-height:30px;
 
 }
-
-}
-
-.nama{
-
-font-size:22px;
-
-line-height:34px;
-
-word-break:normal;
 
 }
