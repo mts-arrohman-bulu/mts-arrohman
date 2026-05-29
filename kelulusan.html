@@ -122,139 +122,165 @@ cekKelulusan();
 
 }
   
-/* CEK KELULUSAN */
-
 function cekKelulusan(){
 
-let nisn = document.getElementById("nisn").value.trim();
+let nisn=document.getElementById("nisn").value.trim();
+let tgl=document.getElementById("tgl").value.trim();
 
-let tgl = document.getElementById("tgl").value.trim();
+let siswa=dataSiswa.find(item=>
 
-let hasil = document.getElementById("hasil");
+item.nisn===nisn &&
+item.tgl===tgl
 
-let ditemukan = dataSiswa.find(function(item){
+);
 
-return item.nisn === nisn &&
-item.tgl === tgl;
+let hasil=document.getElementById("hasil");
 
-});
-
-if(ditemukan){
-
-if(ditemukan.status === "LULUS"){
-
-hasil.className = "hasil lulus";
-
-}else{
-
-hasil.className = "hasil tidak-lulus";
-
-}
-
-hasil.style.display = "block";
+if(!siswa){
 
 hasil.innerHTML=`
 
-<div class="hasil-card">
+<div class="hasil-error">
+
+<h3>Data Tidak Ditemukan</h3>
+
+<p>
+Periksa kembali NISN dan tanggal lahir.
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+hasil.innerHTML=`
+
+<div class="kartu-lulus">
 
 <div class="header-lulus">
 
-<img
-src="logo.png"
-class="logo-hasil">
+<img src="logo.png" class="logo-hasil">
 
-<h2>
+<div class="nama-sekolah">
+
 MTs AR ROHMAN 1 BULU
-</h2>
 
-<p class="tahun">
+</div>
+
+<div class="tahun-hasil">
+
 Tahun Pelajaran 2025/2026
-</p>
 
-<div class="status">
+</div>
+
+</div>
+
+
+<div class="status-area">
 
 <div class="status-kecil">
+
 DINYATAKAN
+
 </div>
 
 <div class="status-besar">
 
-${ditemukan.status}
+${siswa.status}
 
 </div>
 
 </div>
 
-</div>
 
+<div class="identitas">
 
-<div class="info-card">
+<div class="row-data">
 
-<div class="card-title">
-👤 DATA SISWA
-</div>
-
-<div class="info-item">
 <span>Nama Lengkap</span>
-<strong>${ditemukan.nama}</strong>
+
+<strong>
+
+${siswa.nama}
+
+</strong>
+
 </div>
 
-<div class="info-row">
+<div class="dua-kolom">
 
-<div class="info-item">
+<div>
+
 <span>NISN</span>
-<strong>${ditemukan.nisn}</strong>
-</div>
 
-<div class="info-item">
-<span>Kelas</span>
-<strong>IX</strong>
-</div>
+<strong>
 
-</div>
+${siswa.nisn}
 
-<div class="info-item">
-<span>Tanggal Lahir</span>
-<strong>${ditemukan.tgl}</strong>
-</div>
+</strong>
 
-</div>
-
-
-<div class="ucapan-card">
-
-<div class="icon-lulus">
-✅
 </div>
 
 <div>
 
-<h3>Alhamdulillah, Selamat!</h3>
+<span>Kelas</span>
+
+<strong>
+
+IX
+
+</strong>
+
+</div>
+
+</div>
+
+<div class="row-data">
+
+<span>Tanggal Lahir</span>
+
+<strong>
+
+${siswa.tgl}
+
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="pesan">
+
+<h3>
+🎓 Selamat!
+</h3>
 
 <p>
 
-Kamu telah dinyatakan
-<b>LULUS</b>
-dari MTs AR ROHMAN 1 BULU
-Tahun Pelajaran 2025/2026.
+Alhamdulillah, kamu telah dinyatakan
+<b>LULUS</b> dari
+MTs AR ROHMAN 1 BULU.
 
 <br><br>
 
-Teruslah belajar,
-raih cita-cita,
-dan jadilah pribadi yang
+Semoga ilmu yang diperoleh
+menjadi bekal untuk meraih cita-cita
+dan menjadi pribadi yang
 bermanfaat bagi agama,
-bangsa, dan negara.
+bangsa dan negara.
 
 </p>
 
 </div>
 
-</div>
 
 <div class="verifikasi">
 
-Dokumen digital ini terverifikasi
+Dokumen digital terverifikasi
 
 <br>
 
@@ -264,19 +290,16 @@ ${new Date().toLocaleDateString('id-ID')}
 
 
 <button
-class="cek-lagi"
+class="btn-kembali"
 onclick="location.reload()">
 
 ← Cek Siswa Lain
 
 </button>
 
-
 </div>
 
 `;
-
-}
 
 }
 
