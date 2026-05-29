@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,184 +9,31 @@
 
 <link rel="stylesheet" href="kelulusan.css">
 
-<style>
-
-/* BOX UTAMA */
-.box-kelulusan{
-max-width:650px;
-margin:50px auto;
-background:white;
-padding:35px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.15);
-}
-
-/* JUDUL */
-.judul{
-text-align:center;
-margin-bottom:30px;
-}
-
-/* LOGO */
-.logo-sekolah{
-display:block;
-margin:0 auto 15px;
-filter:drop-shadow(0 2px 3px rgba(0,0,0,0.3));
-}
-
-/* JUDUL */
-.judul h1{
-font-size:34px;
-font-weight:bold;
-color:#0a5c2f;
-margin-bottom:10px;
-}
-
-.judul h2{
-font-size:24px;
-margin-bottom:10px;
-color:#333;
-}
-
-.judul p{
-font-size:16px;
-line-height:28px;
-color:#444;
-}
-
-/* FORM */
-.form-group{
-margin-bottom:20px;
-}
-
-.form-group label{
-font-weight:bold;
-margin-bottom:8px;
-display:block;
-}
-
-.form-control{
-width:100%;
-padding:12px;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-box-sizing:border-box;
-}
-
-/* INFO FORMAT */
-.info-format{
-margin-top:8px;
-font-size:13px;
-color:#c0392b;
-}
-
-/* BUTTON */
-.btn-primary{
-width:100%;
-background:#0a5c2f;
-color:white;
-border:none;
-padding:14px;
-font-size:18px;
-font-weight:bold;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn-primary:hover{
-background:#0d7a40;
-}
-
-/* HASIL */
-.hasil{
-margin-top:30px;
-padding:25px;
-border-radius:12px;
-display:none;
-line-height:30px;
-}
-
-/* LULUS */
-.lulus{
-background:#eafaf1;
-border:2px solid #27ae60;
-color:#145a32;
-}
-
-/* TIDAK LULUS */
-.tidak-lulus{
-background:#fdecea;
-border:2px solid #e74c3c;
-color:#922b21;
-}
-
-/* ERROR */
-.error{
-background:#fff8e1;
-border:2px solid #f1c40f;
-color:#7d6608;
-}
-
-/* JUDUL HASIL */
-.hasil h3{
-font-size:38px;
-font-weight:bold;
-text-align:center;
-margin-bottom:20px;
-}
-
-/* RESPONSIVE */
-@media (max-width:768px){
-
-.box-kelulusan{
-margin:20px;
-padding:25px;
-}
-
-.judul h1{
-font-size:28px;
-}
-
-.hasil h3{
-font-size:30px;
-}
-
-}
-
-</style>
-
 </head>
 
 <body>
 
-<div class="box-kelulusan">
+<div class="container">
 
-<div class="judul">
+<div class="card-awal">
 
-<img src="logo.png"
-class="logo-sekolah"
-style="width:150px;height:auto;">
+<img src="logo.png" class="logo">
 
 <h1>PENGUMUMAN KELULUSAN</h1>
 
 <h2>MTs AR ROHMAN 1 BULU</h2>
 
-<p>
-Tahun Ajaran 2025/2026
+<p class="tahun">
+Tahun Pelajaran 2025/2026
 </p>
-
-</div>
 
 <div class="form-group">
 
-<label>Masukkan NISN</label>
+<label>NISN</label>
 
 <input
 type="text"
 id="nisn"
-class="form-control"
 placeholder="Masukkan NISN"
 inputmode="numeric"
 maxlength="10"
@@ -196,57 +44,54 @@ required>
 
 <div class="form-group">
 
-<label>Masukkan Tanggal Lahir</label>
+<label>Tanggal Lahir</label>
 
 <input
 type="text"
 id="tgl"
-class="form-control"
 placeholder="dd/mm/yyyy"
 required>
 
-<p class="info-format">
-Format tanggal lahir: dd/mm/yyyy
-</p>
+<small>
+Format: dd/mm/yyyy
+</small>
 
 </div>
 
 <button
-class="btn-primary"
+class="btn-cek"
 onclick="validasiForm()">
 
 CEK KELULUSAN
 
 </button>
 
-<div id="hasil" class="hasil"></div>
+</div>
+
+<div id="hasil"></div>
 
 </div>
 
 <script>
 
-let dataSiswa = [];
+let dataSiswa=[];
 
-/* BACA CSV */
+fetch("data_kelulusan.csv")
+.then(response=>response.text())
+.then(data=>{
 
-fetch('data_kelulusan.csv')
+const rows=data.split("\n").slice(1);
 
-.then(response => response.text())
+dataSiswa=rows.map(row=>{
 
-.then(data => {
+const cols=row.split(";");
 
-const rows = data.split('\n').slice(1);
+return{
 
-dataSiswa = rows.map(row => {
-
-const cols = row.split(';');
-
-return {
-
-nisn: cols[0]?.trim(),
-tgl: cols[1]?.trim(),
-nama: cols[2]?.trim(),
-status: cols[3]?.trim()
+nisn:cols[0]?.trim(),
+tgl:cols[1]?.trim(),
+nama:cols[2]?.trim(),
+status:cols[3]?.trim()
 
 };
 
@@ -254,26 +99,14 @@ status: cols[3]?.trim()
 
 });
 
-/* VALIDASI FORM */
-
 function validasiForm(){
 
-let nisn =
-document.getElementById("nisn");
-
-let tgl =
-document.getElementById("tgl");
-
-let hasil =
-document.getElementById("hasil");
-
-/* reset hasil lama */
-hasil.style.display="none";
+let nisn=document.getElementById("nisn");
+let tgl=document.getElementById("tgl");
 
 if(!nisn.checkValidity()){
 
 nisn.reportValidity();
-
 return;
 
 }
@@ -281,7 +114,6 @@ return;
 if(!tgl.checkValidity()){
 
 tgl.reportValidity();
-
 return;
 
 }
