@@ -79,6 +79,44 @@ CEK KELULUSAN
 
 let dataSiswa=[];
 
+/* WAKTU BUKA PENGUMUMAN */
+
+const waktuBuka = new Date("2026-05-29T22:20:00");
+
+if(new Date() < waktuBuka){
+
+document.body.innerHTML = `
+
+<div class="belum-buka">
+
+<img src="logo.png" class="logo-lock">
+
+<h1>Pengumuman Kelulusan</h1>
+
+<h2>Belum Dapat Diakses</h2>
+
+<p>
+
+Akses akan dibuka pada:
+
+<br><br>
+
+<b>02 Juni 2026</b>
+
+<br>
+
+<b>17.00 WIB</b>
+
+</p>
+
+</div>
+
+`;
+
+throw new Error("Belum dibuka");
+
+}
+
 fetch("data_kelulusan.csv")
 .then(response=>response.text())
 .then(data=>{
