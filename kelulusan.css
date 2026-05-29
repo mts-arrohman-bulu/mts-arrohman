@@ -1,17 +1,19 @@
-/* BODY */
+/* =========================
+   BODY
+========================= */
 
 body{
 
 margin:0;
+padding:15px;
 
-font-family:Segoe UI', Arial, sans-serif;
+font-family:'Segoe UI',Arial,sans-serif;
 
 background:
 linear-gradient(
-rgba(255,255,255,.82),
-rgba(255,255,255,.82)
+rgba(255,255,255,.85),
+rgba(255,255,255,.85)
 ),
-
 url('bg-islami.png');
 
 background-size:cover;
@@ -21,77 +23,78 @@ background-attachment:fixed;
 }
 
 
-/* BOX UTAMA */
+/* =========================
+   CONTAINER
+========================= */
 
-.box-kelulusan{
+.container{
 
-max-width:720px;
+max-width:700px;
+margin:auto;
 
-margin:40px auto;
+}
+
+
+/* =========================
+   FORM AWAL
+========================= */
+
+.card-awal{
 
 background:white;
 
-padding:35px;
+padding:30px;
 
-border-radius:22px;
+border-radius:25px;
 
 box-shadow:
-0 15px 40px
-rgba(0,0,0,.15);
-
-}
-
-
-/* JUDUL */
-
-.judul{
+0 10px 30px rgba(0,0,0,.12);
 
 text-align:center;
 
-margin-bottom:30px;
+}
+
+.logo{
+
+width:85px;
+
+margin-bottom:15px;
 
 }
 
-.logo-sekolah{
+h1{
 
-display:block;
-
-margin:auto;
-
-width:80px;
-
-}
-
-.judul h1{
+margin:0;
 
 color:#0A5C2F;
 
-font-size:34px;
-
-margin-bottom:10px;
+font-size:30px;
 
 }
 
-.judul h2{
+h2{
 
-font-size:22px;
+margin-top:10px;
 
 color:#444;
 
+font-size:22px;
+
 }
 
-.judul p{
+.tahun{
 
 color:#777;
 
+margin-bottom:25px;
+
 }
-
-
-/* FORM */
 
 .form-group{
 
-margin-bottom:20px;
+margin-bottom:18px;
+
+text-align:left;
 
 }
 
@@ -99,44 +102,39 @@ margin-bottom:20px;
 
 display:block;
 
-margin-bottom:8px;
+font-weight:600;
 
-font-weight:bold;
+margin-bottom:8px;
 
 }
 
-.form-control{
+.form-group input{
 
 width:100%;
 
 padding:14px;
 
-border-radius:10px;
+border:1px solid #ccc;
 
-border:1px solid #ddd;
-
-box-sizing:border-box;
+border-radius:12px;
 
 font-size:16px;
 
-}
-
-.form-control:focus{
-
-outline:none;
-
-border-color:#0A5C2F;
+box-sizing:border-box;
 
 }
 
+.form-group small{
 
-/* BUTTON */
+color:#888;
 
-.btn-primary{
+}
+
+.btn-cek{
 
 width:100%;
 
-padding:16px;
+padding:15px;
 
 background:#0A5C2F;
 
@@ -144,61 +142,62 @@ color:white;
 
 border:none;
 
-border-radius:10px;
+border-radius:12px;
 
 font-size:18px;
+
+font-weight:bold;
 
 cursor:pointer;
 
 }
 
-.btn-primary:hover{
+.btn-cek:hover{
 
 background:#0D7A40;
 
 }
 
 
-/* HASIL */
+/* =========================
+   HASIL
+========================= */
 
-.hasil{
+#hasil{
 
-margin-top:35px;
-
-display:none;
+margin-top:20px;
 
 }
 
 
-/* CARD */
+/* =========================
+   KARTU LULUS
+========================= */
 
-.hasil-card{
+.kartu-lulus{
 
 background:
 linear-gradient(
-145deg,
-#05814B,
-#066038
+180deg,
+#0B7A49,
+#065E38
 );
 
 color:white;
 
-padding:26px;
+padding:25px;
 
-border-radius:30px;
-
-overflow:hidden;
-
-position:relative;
+border-radius:28px;
 
 box-shadow:
-0 12px 35px
-rgba(0,0,0,.18);
+0 12px 35px rgba(0,0,0,.18);
 
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .header-lulus{
 
@@ -208,413 +207,88 @@ text-align:center;
 
 .logo-hasil{
 
-width:90px;
+width:80px;
 
-margin-bottom:15px;
+margin-bottom:12px;
 
 }
 
-.tahun{
+.nama-sekolah{
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+.tahun-hasil{
+
+margin-top:8px;
 
 opacity:.9;
+
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-area{
+
+text-align:center;
+
+margin-top:25px;
 
 margin-bottom:25px;
 
 }
 
-
-/* STATUS */
-
-.status{
-
-margin-bottom:30px;
-
-}
-
 .status-kecil{
 
-font-size:20px;
+font-size:16px;
 
-letter-spacing:5px;
+letter-spacing:4px;
 
 }
 
 .status-besar{
 
-font-size:56px;
+font-size:58px;
 
-font-weight:bold;
-
-margin-top:8px;
+font-weight:800;
 
 color:#FFD54F;
 
+line-height:1.1;
+
 }
 
 
-/* DATA */
+/* =========================
+   IDENTITAS
+========================= */
 
-.data-box{
+.identitas{
 
 background:white;
 
 color:#333;
-
-padding:26px;
-
-border-radius:26px;
-
-margin-top:25px;
-
-box-shadow:
-0 6px 20px
-rgba(0,0,0,.08);
-
-}
-
-.judul-data{
-
-font-size:18px;
-
-font-weight:bold;
-
-color:#0A5C2F;
-
-margin-bottom:20px;
-
-}
-
-.data-item{
-
-margin-bottom:18px;
-
-}
-
-.data-box label{
-
-display:block;
-
-font-size:13px;
-
-color:#888;
-
-margin-bottom:5px;
-
-}
-
-.isi{
-
-font-size:18px;
-
-font-weight:700;
-
-line-height:30px;
-
-word-break:break-word;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:15px;
-
-}
-
-
-/* UCAPAN */
-
-.ucapan{
-
-margin-top:25px;
-
-line-height:32px;
-
-text-align:center;
-
-}
-
-
-/* VERIFIKASI */
-
-.verifikasi{
-
-margin-top:25px;
-
-text-align:center;
-
-opacity:.8;
-
-}
-
-
-/* TOMBOL */
-
-.cek-lagi{
-
-margin-top:30px;
-
-width:100%;
-
-padding:16px;
-
-background:white;
-
-color:#0A5C2F;
-
-border:none;
-
-border-radius:12px;
-
-font-size:16px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-.cek-lagi:hover{
-
-background:#f2f2f2;
-
-}
-
-
-/* RESPONSIVE HP */
-
-@media(max-width:768px){
-
-.box-kelulusan{
-
-padding:10px;
-
-margin:0;
-
-background:none;
-
-box-shadow:none;
-
-}
-
-.hasil-card{
-
-padding:24px;
-
-border-radius:28px;
-
-}
-
-.logo-hasil{
-
-width:75px;
-
-}
-
-.status-kecil{
-
-font-size:16px;
-
-letter-spacing:5px;
-
-}
-
-.status-besar{
-
-font-size:72px;
-
-line-height:80px;
-
-}
-
-.data-box{
-
-padding:20px;
-
-border-radius:22px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:16px;
-
-}
-
-.data-box label{
-
-font-size:14px;
-
-}
-
-.isi{
-
-font-size:18px;
-
-line-height:34px;
-
-}
-
-.ucapan{
-
-font-size:18px;
-
-line-height:34px;
-
-text-align:left;
-
-}
-
-.verifikasi{
-
-font-size:14px;
-
-padding:16px;
-
-}
-
-.cek-lagi{
-
-padding:18px;
-
-font-size:20px;
-
-border-radius:14px;
-
-}
-
-}
-
-/* DATA SISWA BARU */
-
-.baris{
-
-margin-bottom:22px;
-
-}
-
-.label{
-
-font-size:14px;
-
-color:#777;
-
-margin-bottom:10px;
-
-}
-
-.nama{
-
-font-size:22px;
-
-line-height:36px;
-
-font-weight:700;
-
-}
-
-.kolom{
-
-padding:8px 0;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:25px;
-
-margin-bottom:20px;
-
-}
-
-@media(max-width:768px){
-
-.judul-data{
-
-font-size:22px;
-
-margin-bottom:30px;
-
-}
-
-.nama{
-
-font-size:18px;
-
-line-height:30px;
-
-}
-
-.grid{
-
-grid-template-columns:1fr 1fr;
-
-gap:18px;
-
-}
-
-.label{
-
-font-size:13px;
-
-}
-
-.isi{
-
-font-size:18px;
-
-line-height:30px;
-
-}
-
-}
-
-.info-card{
-
-background:#fff;
-
-border-radius:22px;
 
 padding:22px;
 
-margin-top:25px;
-
-color:#333;
-
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+border-radius:22px;
 
 }
 
-.card-title{
-
-font-size:22px;
-
-font-weight:700;
-
-color:#0A5C2F;
-
-margin-bottom:20px;
-
-}
-
-.info-item{
+.row-data{
 
 margin-bottom:18px;
 
 }
 
-.info-item span{
+.row-data span,
+.dua-kolom span{
 
 display:block;
 
@@ -626,83 +300,220 @@ margin-bottom:6px;
 
 }
 
-.info-item strong{
+.row-data strong,
+.dua-kolom strong{
 
-font-size:20px;
+font-size:18px;
 
 display:block;
 
 }
 
-.info-row{
+.dua-kolom{
 
 display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:15px;
+gap:20px;
+
+margin-bottom:18px;
 
 }
 
-.ucapan-card{
 
-background:#eef8f1;
+/* =========================
+   PESAN
+========================= */
 
-border-radius:22px;
+.pesan{
 
-padding:22px;
+background:
+rgba(255,255,255,.12);
+
+padding:20px;
+
+border-radius:18px;
 
 margin-top:20px;
 
-display:flex;
-
-gap:15px;
-
-align-items:flex-start;
-
-color:#333;
-
 }
 
-.icon-lulus{
-
-font-size:36px;
-
-flex-shrink:0;
-
-}
-
-.ucapan-card h3{
+.pesan h3{
 
 margin-top:0;
 
-color:#0A5C2F;
+text-align:center;
 
 }
+
+.pesan p{
+
+line-height:30px;
+
+text-align:left;
+
+}
+
+
+/* =========================
+   VERIFIKASI
+========================= */
+
+.verifikasi{
+
+text-align:center;
+
+margin-top:20px;
+
+opacity:.9;
+
+font-size:14px;
+
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.btn-kembali{
+
+margin-top:20px;
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:white;
+
+color:#0A5C2F;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.hasil-error{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.12);
+
+}
+
+.hasil-error h3{
+
+color:#c0392b;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
 
-.info-row{
+body{
 
-grid-template-columns:1fr 1fr;
+padding:10px;
 
 }
 
-.info-item strong{
+.card-awal{
+
+padding:22px;
+
+}
+
+.logo{
+
+width:70px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+h2{
 
 font-size:18px;
 
 }
 
-.ucapan-card{
+.status-besar{
 
-display:block;
+font-size:48px;
 
 }
 
-.icon-lulus{
+.nama-sekolah{
 
-margin-bottom:12px;
+font-size:20px;
+
+}
+
+.kartu-lulus{
+
+padding:20px;
+
+}
+
+.identitas{
+
+padding:18px;
+
+}
+
+.dua-kolom{
+
+grid-template-columns:1fr 1fr;
+
+gap:12px;
+
+}
+
+.row-data strong,
+.dua-kolom strong{
+
+font-size:16px;
+
+}
+
+.pesan{
+
+padding:18px;
+
+}
+
+.pesan p{
+
+font-size:15px;
+
+line-height:28px;
 
 }
 
