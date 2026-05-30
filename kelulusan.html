@@ -199,11 +199,9 @@ function cekKelulusan(){
 let nisn=document.getElementById("nisn").value.trim();
 let tgl=document.getElementById("tgl").value.trim();
 
-let siswa=dataSiswa.find(item=>
-
+let siswa=dataSiswa.find(item =>
 item.nisn===nisn &&
 item.tgl===tgl
-
 );
 
 let hasil=document.getElementById("hasil");
@@ -240,7 +238,8 @@ pesan=`
 
 <p>
 
-Alhamdulillah, kamu telah dinyatakan <b>LULUS</b> dari
+Alhamdulillah, kamu telah dinyatakan
+<b>LULUS</b> dari
 MTs AR ROHMAN 1 BULU.
 
 <br><br>
@@ -265,7 +264,8 @@ pesan=`
 
 <p>
 
-Kelulusan Anda saat ini <b>DITANGGUHKAN</b>.
+Kelulusan Anda saat ini
+<b>DITANGGUHKAN</b>.
 
 <br><br>
 
@@ -340,47 +340,27 @@ ${siswa.status}
 <div class="identitas">
 
 <div class="row-data">
-
 <span>Nama Lengkap</span>
-
-<strong>
-${siswa.nama}
-</strong>
-
+<strong>${siswa.nama}</strong>
 </div>
 
 <div class="dua-kolom">
 
 <div>
-
 <span>NISN</span>
-
-<strong>
-${siswa.nisn}
-</strong>
-
+<strong>${siswa.nisn}</strong>
 </div>
 
 <div>
-
 <span>Kelas</span>
-
-<strong>
-IX
-</strong>
-
+<strong>IX</strong>
 </div>
 
 </div>
 
 <div class="row-data">
-
 <span>Tanggal Lahir</span>
-
-<strong>
-${siswa.tgl}
-</strong>
-
+<strong>${siswa.tgl}</strong>
 </div>
 
 </div>
@@ -412,200 +392,6 @@ Tanggal Pengumuman
 <b>17.00 WIB</b>
 
 </div>
-
-<button
-class="btn-kembali"
-onclick="location.reload()">
-
-← Cek Siswa Lain
-
-</button>
-
-</div>
-
-`;
-
-}
-
-
-hasil.innerHTML=`
-
-<div class="kartu-lulus">
-
-<div class="header-lulus">
-
-<img src="logo.png" class="logo-hasil">
-
-<div class="nama-sekolah">
-
-MTs AR ROHMAN 1 BULU
-
-</div>
-
-<div class="tahun-hasil">
-
-Tahun Pelajaran 2025/2026
-
-</div>
-
-</div>
-
-
-<div class="status-area">
-
-<div class="status-kecil">
-
-DINYATAKAN
-
-</div>
-
-<div class="status-besar">
-
-${siswa.status}
-
-</div>
-
-<div class="status-besar
-${siswa.status==='DITANGGUHKAN'
-? 'status-ditangguhkan'
-: ''}">
-
-</div>
-
-</div>
-
-
-<div class="identitas">
-
-<div class="row-data">
-
-<span>Nama Lengkap</span>
-
-<strong>
-
-${siswa.nama}
-
-</strong>
-
-</div>
-
-<div class="dua-kolom">
-
-<div>
-
-<span>NISN</span>
-
-<strong>
-
-${siswa.nisn}
-
-</strong>
-
-</div>
-
-<div>
-
-<span>Kelas</span>
-
-<strong>
-
-IX
-
-</strong>
-
-</div>
-
-</div>
-
-<div class="row-data">
-
-<span>Tanggal Lahir</span>
-
-<strong>
-
-${siswa.tgl}
-
-</strong>
-
-</div>
-
-</div>
-
-
-let pesan = "";
-
-if(siswa.status==="LULUS"){
-
-pesan=`
-
-<h3>🎓 Selamat!</h3>
-
-<p>
-
-Alhamdulillah, kamu telah dinyatakan
-<b>LULUS</b> dari
-MTs AR ROHMAN 1 BULU.
-
-</p>
-
-<br><br>
-
-Semoga ilmu yang diperoleh
-menjadi bekal untuk meraih cita-cita
-dan menjadi pribadi yang
-bermanfaat bagi agama,
-bangsa dan negara.
-
-</p>
-
-`;
-
-}
-
-else if(siswa.status==="DITANGGUHKAN"){
-
-pesan=`
-
-<h3>📌 Kelulusan Ditangguhkan</h3>
-
-<p>
-
-Kelulusan Anda saat ini
-<b>DITANGGUHKAN</b>.
-
-Silakan segera menyelesaikan
-tanggungan administrasi dan/atau
-nilai praktik yang belum terpenuhi.
-
-Untuk informasi lebih lanjut,
-silakan menghubungi wali kelas
-atau pihak madrasah.
-
-</p>
-
-`;
-
-}
-
-</div>
-
-
-<div class="verifikasi">
-
-Dokumen digital terverifikasi
-
-<br><br>
-
-Pengumuman ini sah dan diterbitkan oleh
-
-<br>
-
-<b>MTs AR ROHMAN 1 BULU</b>
-
-<br><br>
-
-</div>
-
 
 <button
 class="btn-kembali"
