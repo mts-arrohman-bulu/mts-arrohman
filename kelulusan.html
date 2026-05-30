@@ -228,6 +228,206 @@ return;
 
 }
 
+let pesan="";
+
+if(siswa.status==="LULUS"){
+
+pesan=`
+
+<div class="pesan">
+
+<h3>🎓 Selamat!</h3>
+
+<p>
+
+Alhamdulillah, kamu telah dinyatakan <b>LULUS</b> dari
+MTs AR ROHMAN 1 BULU.
+
+<br><br>
+
+Semoga ilmu yang diperoleh menjadi bekal
+untuk meraih cita-cita dan menjadi pribadi
+yang bermanfaat bagi agama, bangsa dan negara.
+
+</p>
+
+</div>
+
+`;
+
+}else if(siswa.status==="DITANGGUHKAN"){
+
+pesan=`
+
+<div class="pesan">
+
+<h3>📌 Kelulusan Ditangguhkan</h3>
+
+<p>
+
+Kelulusan Anda saat ini <b>DITANGGUHKAN</b>.
+
+<br><br>
+
+Silakan segera menyelesaikan
+tanggungan administrasi dan/atau
+nilai praktik yang belum terpenuhi.
+
+<br><br>
+
+Untuk informasi lebih lanjut,
+silakan menghubungi wali kelas
+atau pihak madrasah.
+
+</p>
+
+</div>
+
+`;
+
+}else{
+
+pesan=`
+
+<div class="pesan">
+
+<h3>📄 Status Kelulusan</h3>
+
+<p>
+
+Status kelulusan Anda:
+
+<b>${siswa.status}</b>
+
+</p>
+
+</div>
+
+`;
+
+}
+
+hasil.innerHTML=`
+
+<div class="kartu-lulus">
+
+<div class="header-lulus">
+
+<img src="logo.png" class="logo-hasil">
+
+<div class="nama-sekolah">
+MTs AR ROHMAN 1 BULU
+</div>
+
+<div class="tahun-hasil">
+Tahun Pelajaran 2025/2026
+</div>
+
+</div>
+
+<div class="status-area">
+
+<div class="status-kecil">
+DINYATAKAN
+</div>
+
+<div class="status-besar">
+${siswa.status}
+</div>
+
+</div>
+
+<div class="identitas">
+
+<div class="row-data">
+
+<span>Nama Lengkap</span>
+
+<strong>
+${siswa.nama}
+</strong>
+
+</div>
+
+<div class="dua-kolom">
+
+<div>
+
+<span>NISN</span>
+
+<strong>
+${siswa.nisn}
+</strong>
+
+</div>
+
+<div>
+
+<span>Kelas</span>
+
+<strong>
+IX
+</strong>
+
+</div>
+
+</div>
+
+<div class="row-data">
+
+<span>Tanggal Lahir</span>
+
+<strong>
+${siswa.tgl}
+</strong>
+
+</div>
+
+</div>
+
+${pesan}
+
+<div class="verifikasi">
+
+Dokumen digital terverifikasi
+
+<br><br>
+
+Pengumuman ini sah dan diterbitkan oleh
+
+<br>
+
+<b>MTs AR ROHMAN 1 BULU</b>
+
+<br><br>
+
+Tanggal Pengumuman
+
+<br>
+
+<b>02 Juni 2026</b>
+
+<br>
+
+<b>17.00 WIB</b>
+
+</div>
+
+<button
+class="btn-kembali"
+onclick="location.reload()">
+
+← Cek Siswa Lain
+
+</button>
+
+</div>
+
+`;
+
+}
+
+
 hasil.innerHTML=`
 
 <div class="kartu-lulus">
