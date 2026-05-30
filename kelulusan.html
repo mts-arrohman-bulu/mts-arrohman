@@ -81,7 +81,7 @@ let dataSiswa=[];
 
 /* WAKTU BUKA PENGUMUMAN */
 
-const waktuBuka = new Date("2026-06-02T17:00:00");
+const waktuBuka = new Date("2026-05-30T12:00:00");
 
 if(new Date() < waktuBuka){
 
@@ -265,6 +265,13 @@ ${siswa.status}
 
 </div>
 
+<div class="status-besar
+${siswa.status==='DITANGGUHKAN'
+? 'status-ditangguhkan'
+: ''}">
+
+</div>
+
 </div>
 
 
@@ -325,17 +332,21 @@ ${siswa.tgl}
 </div>
 
 
-<div class="pesan">
+let pesan = "";
 
-<h3>
-🎓 Selamat!
-</h3>
+if(siswa.status==="LULUS"){
+
+pesan=`
+
+<h3>🎓 Selamat!</h3>
 
 <p>
 
 Alhamdulillah, kamu telah dinyatakan
 <b>LULUS</b> dari
 MTs AR ROHMAN 1 BULU.
+
+</p>
 
 <br><br>
 
@@ -346,6 +357,35 @@ bermanfaat bagi agama,
 bangsa dan negara.
 
 </p>
+
+`;
+
+}
+
+else if(siswa.status==="DITANGGUHKAN"){
+
+pesan=`
+
+<h3>📌 Kelulusan Ditangguhkan</h3>
+
+<p>
+
+Kelulusan Anda saat ini
+<b>DITANGGUHKAN</b>.
+
+Silakan segera menyelesaikan
+tanggungan administrasi dan/atau
+nilai praktik yang belum terpenuhi.
+
+Untuk informasi lebih lanjut,
+silakan menghubungi wali kelas
+atau pihak madrasah.
+
+</p>
+
+`;
+
+}
 
 </div>
 
