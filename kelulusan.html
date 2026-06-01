@@ -81,7 +81,7 @@ let dataSiswa=[];
 
 /* WAKTU BUKA PENGUMUMAN */
 
-const waktuBuka = new Date("2026-05-30T12:00:00");
+const waktuBuka = new Date("2026-06-01T08:20:00");
 
 if(new Date() < waktuBuka){
 
@@ -94,6 +94,8 @@ document.body.innerHTML = `
 <h1>Pengumuman Kelulusan</h1>
 
 <h2>Belum Dapat Diakses</h2>
+
+<div id="countdown"></div>
 
 <p>
 
@@ -112,6 +114,89 @@ Akses akan dibuka pada:
 </div>
 
 `;
+
+setInterval(function(){
+
+let sekarang = new Date().getTime();
+
+let selisih =
+waktuBuka.getTime() - sekarang;
+
+let hari =
+Math.floor(selisih / (1000*60*60*24));
+
+let jam =
+Math.floor((selisih % (1000*60*60*24))
+/ (1000*60*60));
+
+let menit =
+Math.floor((selisih % (1000*60*60))
+/ (1000*60));
+
+let detik =
+Math.floor((selisih % (1000*60))
+/ 1000);
+
+let countdown =
+document.getElementById("countdown");
+
+if(countdown){
+
+countdown.innerHTML =
+
+`
+<div class="count-box">
+
+<div class="angka">
+${hari}
+</div>
+
+<div class="label">
+Hari
+</div>
+
+</div>
+
+<div class="count-box">
+
+<div class="angka">
+${jam}
+</div>
+
+<div class="label">
+Jam
+</div>
+
+</div>
+
+<div class="count-box">
+
+<div class="angka">
+${menit}
+</div>
+
+<div class="label">
+Menit
+</div>
+
+</div>
+
+<div class="count-box">
+
+<div class="angka">
+${detik}
+</div>
+
+<div class="label">
+Detik
+</div>
+
+</div>
+`;
+
+}
+
+},1000);
 
 throw new Error("Belum dibuka");
 
